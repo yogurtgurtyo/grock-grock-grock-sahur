@@ -4,13 +4,13 @@
 [ext_resource type="Shader" uid="uid://c7uvlfql4e82o" path="res://themes and more/water.gdshader" id="2_hqns4"]
 [ext_resource type="Texture2D" uid="uid://d0jjk2lkx7gtc" path="res://color/oceangradient.png" id="2_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://cougscpufxgvy" path="res://art/fx/darkbubble.png" id="2_x0ka3"]
-[ext_resource type="Texture2D" uid="uid://d211ipnmq5l75" path="res://art/placeolder/hi placeohneer1-Sheet.png" id="3_0hol4"]
 [ext_resource type="Script" uid="uid://d2kh2xv35es6p" path="res://character_body_2d.gd" id="3_q6r6c"]
 [ext_resource type="Shader" uid="uid://blv1y2bagkkto" path="res://themes and more/wavytext.gdshader" id="3_rj586"]
 [ext_resource type="Theme" uid="uid://q50ntxq2p0qf" path="res://themes and more/font.tres" id="4_4d7sh"]
 [ext_resource type="Script" uid="uid://b3nns3sva8mr5" path="res://doortransition.gd" id="4_x0ka3"]
 [ext_resource type="Texture2D" uid="uid://svtli0dmratx" path="res://art/ui/thumbpad1.png" id="5_kdubu"]
 [ext_resource type="Texture2D" uid="uid://dtxf87hi3bwx4" path="res://art/ui/thumbpad2.png" id="6_d21ai"]
+[ext_resource type="Texture2D" uid="uid://cknlxaxuuiyab" path="res://art/player/nonchalant walk cycle.png" id="9_0h7mo"]
 [ext_resource type="Texture2D" uid="uid://73glqyvv1kmq" path="res://art/Hull/Hull_Generator_Blue.png" id="9_hqns4"]
 [ext_resource type="Script" uid="uid://cv177dly368bq" path="res://camera.gd" id="13_0h7mo"]
 
@@ -57,6 +57,7 @@ shader_parameter/frequency = 1.0
 shader_parameter/speed = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q6r6c"]
+size = Vector2(16, 28.088234)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_03dd7"]
 texture = ExtResource("5_kdubu")
@@ -168,14 +169,15 @@ position = Vector2(16, 100)
 script = ExtResource("3_q6r6c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=280279395]
-position = Vector2(0, 0.5)
-scale = Vector2(1, 1.55)
+position = Vector2(0, -6.125)
+scale = Vector2(1, 1.7)
 shape = SubResource("RectangleShape2D_q6r6c")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=436276463]
 z_index = 1
 texture_filter = 1
-texture = ExtResource("3_0hol4")
+position = Vector2(0, -6)
+texture = ExtResource("9_0h7mo")
 hframes = 4
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1456491527]
