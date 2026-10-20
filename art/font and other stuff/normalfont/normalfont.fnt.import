@@ -1,0 +1,16 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://dm8ealbl018vj"
+valid=false
+
+[deps]
+
+source_file="res://art/font and other stuff/normalfont/normalfont.fnt"
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2
