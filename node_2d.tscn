@@ -8,9 +8,11 @@
 [ext_resource type="Script" uid="uid://d2kh2xv35es6p" path="res://character_body_2d.gd" id="3_q6r6c"]
 [ext_resource type="Shader" uid="uid://blv1y2bagkkto" path="res://themes and more/wavytext.gdshader" id="3_rj586"]
 [ext_resource type="Theme" uid="uid://q50ntxq2p0qf" path="res://themes and more/font.tres" id="4_4d7sh"]
+[ext_resource type="Script" uid="uid://b3nns3sva8mr5" path="res://doortransition.gd" id="4_x0ka3"]
 [ext_resource type="Texture2D" uid="uid://svtli0dmratx" path="res://art/ui/thumbpad1.png" id="5_kdubu"]
 [ext_resource type="Texture2D" uid="uid://dtxf87hi3bwx4" path="res://art/ui/thumbpad2.png" id="6_d21ai"]
 [ext_resource type="Texture2D" uid="uid://73glqyvv1kmq" path="res://art/Hull/Hull_Generator_Blue.png" id="9_hqns4"]
+[ext_resource type="Script" uid="uid://cv177dly368bq" path="res://camera.gd" id="13_0h7mo"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hqns4"]
 shader = ExtResource("3_rj586")
@@ -39,6 +41,9 @@ gravity = Vector3(0, -49, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_omo0a"]
+size = Vector2(10, 10)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x0ka3"]
 shader = ExtResource("2_hqns4")
 shader_parameter/height = 5.0
@@ -65,11 +70,20 @@ texture = ExtResource("5_kdubu")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0l7jo"]
 texture = ExtResource("6_d21ai")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uiupi"]
+size = Vector2(255, 128)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_03dd7"]
 shader = ExtResource("2_hqns4")
-shader_parameter/height = 2.0
+shader_parameter/height = 5.0
 shader_parameter/frequency = 5.0
-shader_parameter/speed = 1.0
+shader_parameter/speed = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nas6c"]
+size = Vector2(256, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_21gxa"]
+size = Vector2(6, 128)
 
 [node name="Node2D" type="Node2D" unique_id=967518733]
 
@@ -109,6 +123,15 @@ position = Vector2(0, -60)
 scale = Vector2(12.8, 0.5)
 shape = SubResource("RectangleShape2D_0e48y")
 
+[node name="Area2D" type="Area2D" parent="HullScannerRoom/StaticBody2D" unique_id=1116212881 node_paths=PackedStringArray("target_spawn_point")]
+script = ExtResource("4_x0ka3")
+target_spawn_point = NodePath("../../../HullGeneratorBlue/Node2D")
+
+[node name="door" type="CollisionShape2D" parent="HullScannerRoom/StaticBody2D/Area2D" unique_id=2066000740]
+position = Vector2(120.5, 23)
+scale = Vector2(0.5, 6.4)
+shape = SubResource("RectangleShape2D_omo0a")
+
 [node name="Camera2D" type="Camera2D" parent="HullScannerRoom" unique_id=2131969560]
 zoom = Vector2(3.5, 3.5)
 
@@ -132,9 +155,15 @@ offset_bottom = -64.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_4d7sh")
-text = "Hull Scanner Room "
+text = "	Hull Scanner Room "
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=776629283]
+[node name="Node2D" type="Node2D" parent="HullScannerRoom" unique_id=305717139]
+position = Vector2(93, 22)
+
+[node name="Marker2D" type="Marker2D" parent="HullScannerRoom/Node2D" unique_id=1138733992]
+position = Vector2(0, 19)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=776629283 groups=["Player"]]
 position = Vector2(16, 100)
 script = ExtResource("3_q6r6c")
 
@@ -144,6 +173,7 @@ scale = Vector2(1, 1.55)
 shape = SubResource("RectangleShape2D_q6r6c")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=436276463]
+z_index = 1
 texture_filter = 1
 texture = ExtResource("3_0hol4")
 hframes = 4
@@ -181,12 +211,84 @@ position = Vector2(512, 64)
 texture = ExtResource("9_hqns4")
 hframes = 5
 
+[node name="Area2D" type="Area2D" parent="HullGeneratorBlue" unique_id=503738795 node_paths=PackedStringArray("target_camera_to_enable", "target_camera_to_disable")]
+collision_layer = 0
+script = ExtResource("13_0h7mo")
+target_camera_to_enable = NodePath("../Camera2D")
+target_camera_to_disable = NodePath("../../HullScannerRoom/Camera2D")
+player_group_name = &"Player"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HullGeneratorBlue/Area2D" unique_id=442987697]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_uiupi")
+
 [node name="Sprite2D" type="Sprite2D" parent="HullGeneratorBlue" unique_id=1338909072]
 z_index = -2
 texture_filter = 1
 material = SubResource("ShaderMaterial_03dd7")
 scale = Vector2(1.5, 1)
 texture = ExtResource("2_ir8iy")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HullGeneratorBlue" unique_id=365563744]
+texture_filter = 1
+material = SubResource("ShaderMaterial_tt2tb")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -64.0
+offset_right = -128.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_4d7sh")
+text = "	Generator Room"
+
+[node name="Node2D" type="Node2D" parent="HullGeneratorBlue" unique_id=1579930508]
+position = Vector2(-90, 30)
+
+[node name="Marker2D" type="Marker2D" parent="HullGeneratorBlue/Node2D" unique_id=474250370]
+position = Vector2(0, 19)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="HullGeneratorBlue" unique_id=626642954]
+
+[node name="floor" type="CollisionShape2D" parent="HullGeneratorBlue/StaticBody2D" unique_id=513612258]
+position = Vector2(0, 60)
+shape = SubResource("RectangleShape2D_nas6c")
+
+[node name="wall" type="CollisionShape2D" parent="HullGeneratorBlue/StaticBody2D" unique_id=125335390]
+position = Vector2(-125, 0)
+shape = SubResource("RectangleShape2D_21gxa")
+
+[node name="wall2" type="CollisionShape2D" parent="HullGeneratorBlue/StaticBody2D" unique_id=1261708520]
+position = Vector2(127, 0)
+shape = SubResource("RectangleShape2D_21gxa")
+
+[node name="floor2" type="CollisionShape2D" parent="HullGeneratorBlue/StaticBody2D" unique_id=1716567896]
+position = Vector2(0, -66)
+shape = SubResource("RectangleShape2D_nas6c")
+
+[node name="Camera2D" type="Camera2D" parent="HullGeneratorBlue" unique_id=1234374401]
+position = Vector2(0.5, 0)
+zoom = Vector2(3.5, 3.5)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="HullGeneratorBlue" unique_id=467864572]
+z_index = -1
+texture_filter = 1
+material = SubResource("ShaderMaterial_hqns4")
+scale = Vector2(1.5, 1)
+texture = ExtResource("2_x0ka3")
+lifetime = 4.0
+process_material = SubResource("ParticleProcessMaterial_tt2tb")
+
+[node name="Area2D2" type="Area2D" parent="HullGeneratorBlue" unique_id=1988654226 node_paths=PackedStringArray("target_spawn_point")]
+script = ExtResource("4_x0ka3")
+target_spawn_point = NodePath("../../HullScannerRoom/Node2D/Marker2D")
+
+[node name="door" type="CollisionShape2D" parent="HullGeneratorBlue/Area2D2" unique_id=69076689]
+position = Vector2(-119.5, 24)
+scale = Vector2(0.5, 6.4)
+shape = SubResource("RectangleShape2D_omo0a")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1457985268]
 z_index = -1
