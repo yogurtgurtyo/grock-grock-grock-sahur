@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cknlxaxuuiyab" path="res://art/player/nonchalant walk cycle.png" id="9_0h7mo"]
 [ext_resource type="Texture2D" uid="uid://73glqyvv1kmq" path="res://art/Hull/Hull_Generator_Blue.png" id="9_hqns4"]
 [ext_resource type="Script" uid="uid://cv177dly368bq" path="res://camera.gd" id="13_0h7mo"]
+[ext_resource type="Texture2D" uid="uid://b13q7kdx05dr7" path="res://color/black.png" id="14_nr8wp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hqns4"]
 shader = ExtResource("3_rj586")
@@ -295,7 +296,6 @@ shape = SubResource("RectangleShape2D_omo0a")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1457985268]
 z_index = -1
 texture_filter = 1
-material = SubResource("ShaderMaterial_03dd7")
-position = Vector2(2017, 11)
-scale = Vector2(1.5, 1)
-texture = ExtResource("2_ir8iy")
+position = Vector2(315, 64)
+scale = Vector2(1.5, 0.49)
+texture = ExtResource("14_nr8wp")

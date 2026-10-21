@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://1koghjyuo7xi"]
+
+[ext_resource type="Texture2D" uid="uid://cgeglxxi6orcs" path="res://art/ctusene/evil hunter type Shit.png" id="1_f0j1r"]
+[ext_resource type="Script" uid="uid://c8yeeulm5cecj" path="res://cutscenemainmenu.gd" id="2_iv0vr"]
+[ext_resource type="FontFile" uid="uid://cwnjamwvqbvfy" path="res://art/font and other stuff/evilgamefont.ttf" id="2_qqwyt"]
+[ext_resource type="Texture2D" uid="uid://b1xnnvx4jjln5" path="res://art/ui/skin thing.png" id="3_iv0vr"]
+[ext_resource type="Shader" uid="uid://d5wve1xnr878" path="res://water.gdshader" id="5_5d0og"]
+[ext_resource type="Texture2D" uid="uid://bdo82rdd70dgw" path="res://art/oceanwater.png" id="5_iv0vr"]
+[ext_resource type="Shader" uid="uid://blv1y2bagkkto" path="res://themes and more/wavytext.gdshader" id="7_mw7qi"]
+[ext_resource type="Texture2D" uid="uid://dcews6tt71iyg" path="res://art/ui/logo eye.png" id="8_n1emc"]
+[ext_resource type="Texture2D" uid="uid://b24ngt20aa30c" path="res://art/ui/logosquid.png" id="9_gym6g"]
+[ext_resource type="Script" uid="uid://db7vyb6p4s2lo" path="res://togamebutton.gd" id="10_7bqju"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iv0vr"]
+shader = ExtResource("5_5d0og")
+shader_parameter/height = 2.0
+shader_parameter/frequency = 5.0
+shader_parameter/speed = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_omo0a"]
+shader = ExtResource("7_mw7qi")
+shader_parameter/height = 10.0
+shader_parameter/frequency = 5.0
+shader_parameter/speed = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nr8wp"]
+shader = ExtResource("7_mw7qi")
+shader_parameter/height = 2.0
+shader_parameter/frequency = 2.5
+shader_parameter/speed = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uiupi"]
+shader = ExtResource("7_mw7qi")
+shader_parameter/height = 2.0
+shader_parameter/frequency = 2.5
+shader_parameter/speed = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_21gxa"]
+shader = ExtResource("7_mw7qi")
+shader_parameter/height = 2.0
+shader_parameter/frequency = 5.0
+shader_parameter/speed = 1.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_omo0a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nas6c"]
+
+[node name="Node2D" type="Node2D" unique_id=1302691193]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=571557765]
+z_index = 1
+position = Vector2(400, 225)
+texture = ExtResource("1_f0j1r")
+hframes = 5
+vframes = 24
+script = ExtResource("2_iv0vr")
+
+[node name="Control" type="Control" parent="." unique_id=1665255259]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control" unique_id=1097926852]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 358.0
+offset_right = 184.0
+offset_bottom = 418.0
+theme_override_fonts/font = ExtResource("2_qqwyt")
+text = "SKIB CUSTENE"
+icon = ExtResource("3_iv0vr")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=643521659]
+offset = Vector2(400, 235)
+zoom = Vector2(1.495, 1.495)
+
+[node name="main menu" type="Control" parent="." unique_id=1961683271]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="main menu" unique_id=573343033]
+z_index = -2
+material = SubResource("ShaderMaterial_iv0vr")
+position = Vector2(199, 227)
+scale = Vector2(6.219, 8)
+texture = ExtResource("5_iv0vr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="main menu" unique_id=2054769102]
+z_index = -2
+material = SubResource("ShaderMaterial_iv0vr")
+position = Vector2(596, 227.00002)
+scale = Vector2(-6.219, 8)
+texture = ExtResource("5_iv0vr")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="main menu" unique_id=177704016]
+material = SubResource("ShaderMaterial_omo0a")
+layout_mode = 0
+offset_right = 795.0
+offset_bottom = 306.0
+theme_override_fonts/normal_font = ExtResource("2_qqwyt")
+theme_override_font_sizes/normal_font_size = 128
+text = "ABYSS"
+tab_size = 10
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="main menu/RichTextLabel" unique_id=1843789020]
+z_index = -1
+material = SubResource("ShaderMaterial_nr8wp")
+position = Vector2(390.5, 291.5)
+scale = Vector2(2.4531255, 2.296875)
+texture = ExtResource("8_n1emc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="main menu/RichTextLabel" unique_id=1414361917]
+z_index = -2
+material = SubResource("ShaderMaterial_uiupi")
+position = Vector2(372, 218)
+scale = Vector2(2.8554688, 3.9140623)
+texture = ExtResource("9_gym6g")
+
+[node name="Button" type="Button" parent="main menu" unique_id=1950341944]
+material = SubResource("ShaderMaterial_21gxa")
+layout_mode = 0
+offset_left = 237.0
+offset_top = 264.0
+offset_right = 536.0
+offset_bottom = 413.0
+theme_override_fonts/font = ExtResource("2_qqwyt")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxEmpty_omo0a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nas6c")
+button_mask = 5
+text = "DESCEND"
+script = ExtResource("10_7bqju")
+target_scene = "uid://dwefa35g8u6kk"
+
+[connection signal="finished" from="Sprite2D" to="Control/Button" method="hide"]
+[connection signal="skipped" from="Sprite2D" to="Control/Button" method="hide"]
+[connection signal="pressed" from="Control/Button" to="Sprite2D" method="skip_cutscene"]
