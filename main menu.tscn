@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://b1xnnvx4jjln5" path="res://art/ui/skin thing.png" id="3_iv0vr"]
 [ext_resource type="Shader" uid="uid://d5wve1xnr878" path="res://water.gdshader" id="5_5d0og"]
 [ext_resource type="Texture2D" uid="uid://bdo82rdd70dgw" path="res://art/oceanwater.png" id="5_iv0vr"]
+[ext_resource type="Texture2D" uid="uid://b13q7kdx05dr7" path="res://color/black.png" id="5_r6v61"]
+[ext_resource type="Script" uid="uid://muw68cm1kawu" path="res://fade out.gd" id="6_jybf4"]
 [ext_resource type="Shader" uid="uid://blv1y2bagkkto" path="res://themes and more/wavytext.gdshader" id="7_mw7qi"]
 [ext_resource type="Texture2D" uid="uid://dcews6tt71iyg" path="res://art/ui/logo eye.png" id="8_n1emc"]
 [ext_resource type="Texture2D" uid="uid://b24ngt20aa30c" path="res://art/ui/logosquid.png" id="9_gym6g"]
@@ -48,7 +50,7 @@ shader_parameter/speed = 1.0
 [node name="Node2D" type="Node2D" unique_id=1302691193]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=571557765]
-z_index = 1
+z_index = 2
 position = Vector2(400, 225)
 texture = ExtResource("1_f0j1r")
 hframes = 5
@@ -61,8 +63,10 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="Control" unique_id=1097926852]
+z_index = 2
 layout_mode = 0
 offset_left = 32.0
 offset_top = 358.0
@@ -71,6 +75,7 @@ offset_bottom = 418.0
 theme_override_fonts/font = ExtResource("2_qqwyt")
 text = "SKIB CUSTENE"
 icon = ExtResource("3_iv0vr")
+metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=643521659]
 offset = Vector2(400, 235)
@@ -81,6 +86,15 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Sprite2D3" type="Sprite2D" parent="main menu" unique_id=988731073 node_paths=PackedStringArray("cutscene")]
+z_index = 1
+texture_filter = 1
+position = Vector2(400, 235)
+scale = Vector2(5, 5)
+texture = ExtResource("5_r6v61")
+script = ExtResource("6_jybf4")
+cutscene = NodePath("../../Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="main menu" unique_id=573343033]
 z_index = -2

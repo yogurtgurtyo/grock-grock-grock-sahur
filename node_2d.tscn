@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dwefa35g8u6kk"]
 
-[ext_resource type="Texture2D" uid="uid://b0h3yfu7nxku8" path="res://art/Hull/Hull_Scanner_Room.png" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://binwwy33wtrw1" path="res://art/Hull/Hull_Scanner_Room_Sprite_Sheet.png" id="1_ta5nu"]
 [ext_resource type="Shader" uid="uid://c7uvlfql4e82o" path="res://themes and more/water.gdshader" id="2_hqns4"]
 [ext_resource type="Texture2D" uid="uid://d0jjk2lkx7gtc" path="res://color/oceangradient.png" id="2_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://cougscpufxgvy" path="res://art/fx/darkbubble.png" id="2_x0ka3"]
@@ -14,6 +14,14 @@
 [ext_resource type="Texture2D" uid="uid://73glqyvv1kmq" path="res://art/Hull/Hull_Generator_Blue.png" id="9_hqns4"]
 [ext_resource type="Script" uid="uid://cv177dly368bq" path="res://camera.gd" id="13_0h7mo"]
 [ext_resource type="Texture2D" uid="uid://b13q7kdx05dr7" path="res://color/black.png" id="14_nr8wp"]
+[ext_resource type="Texture2D" uid="uid://tvouh8m6lt33" path="res://art/Hull/Hull_Living_Quarters.png" id="15_d2bti"]
+[ext_resource type="Texture2D" uid="uid://cw0j3ifj27blb" path="res://art/Hull/Hull_Ladder_Top.png" id="16_ta5nu"]
+[ext_resource type="Texture2D" uid="uid://v2ph1tkw08cl" path="res://art/ui/down.png" id="17_flf07"]
+[ext_resource type="Script" uid="uid://cnvty0eqvkue" path="res://buttontp.gd" id="18_rjqkl"]
+[ext_resource type="Texture2D" uid="uid://ygpdm18mqr04" path="res://art/Hull/Hull_Ladder_Bottom.png" id="19_fs4d3"]
+[ext_resource type="Texture2D" uid="uid://djhq78dr3ukeo" path="res://art/Hull/Hull_Sub_Dock_Sprite_Sheet.png" id="20_fs4d3"]
+[ext_resource type="FontFile" uid="uid://cwnjamwvqbvfy" path="res://art/font and other stuff/evilgamefont.ttf" id="21_7vxoj"]
+[ext_resource type="Script" uid="uid://db7vyb6p4s2lo" path="res://togamebutton.gd" id="22_ei405"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hqns4"]
 shader = ExtResource("3_rj586")
@@ -42,9 +50,6 @@ gravity = Vector3(0, -49, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_omo0a"]
-size = Vector2(10, 10)
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x0ka3"]
 shader = ExtResource("2_hqns4")
 shader_parameter/height = 5.0
@@ -56,6 +61,12 @@ shader = ExtResource("3_rj586")
 shader_parameter/height = 2.0
 shader_parameter/frequency = 1.0
 shader_parameter/speed = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0l7jo"]
+size = Vector2(246, 115)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_omo0a"]
+size = Vector2(10, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q6r6c"]
 size = Vector2(16, 28.088234)
@@ -75,24 +86,88 @@ texture = ExtResource("6_d21ai")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uiupi"]
 size = Vector2(255, 128)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_03dd7"]
-shader = ExtResource("2_hqns4")
-shader_parameter/height = 5.0
-shader_parameter/frequency = 5.0
-shader_parameter/speed = 5.0
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nas6c"]
 size = Vector2(256, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_21gxa"]
 size = Vector2(6, 128)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_03dd7"]
+shader = ExtResource("2_hqns4")
+shader_parameter/height = 5.0
+shader_parameter/frequency = 5.0
+shader_parameter/speed = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tt2tb"]
+size = Vector2(128, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_03dd7"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t0cus"]
+size = Vector2(128, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gd040"]
+size = Vector2(5, 120)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k73cj"]
+shader = ExtResource("2_hqns4")
+shader_parameter/height = 1.0
+shader_parameter/frequency = 5.0
+shader_parameter/speed = 1.5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tt2tb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_03dd7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t0cus"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gd040"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0l7jo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p0so7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0so7"]
+size = Vector2(128, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2s7pg"]
+size = Vector2(18, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txmia"]
+size = Vector2(128, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mhwy0"]
+size = Vector2(4, 128)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t0cus"]
+shader = ExtResource("2_hqns4")
+shader_parameter/height = 2.0
+shader_parameter/frequency = 5.0
+shader_parameter/speed = 1.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ggaw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_txmia"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mhwy0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8hhmu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hndkw"]
+
 [node name="Node2D" type="Node2D" unique_id=967518733]
+
+[node name="dark3" type="Sprite2D" parent="." unique_id=982375356]
+position = Vector2(-192.99998, 343)
+scale = Vector2(0.539, 0.5390625)
+texture = ExtResource("14_nr8wp")
 
 [node name="HullScannerRoom" type="Sprite2D" parent="." unique_id=1466404035]
 texture_filter = 1
 position = Vector2(128, 64)
-texture = ExtResource("1_wtcfe")
+texture = ExtResource("1_ta5nu")
+hframes = 5
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="HullScannerRoom" unique_id=434633549]
 z_index = -1
@@ -125,18 +200,6 @@ position = Vector2(0, -60)
 scale = Vector2(12.8, 0.5)
 shape = SubResource("RectangleShape2D_0e48y")
 
-[node name="Area2D" type="Area2D" parent="HullScannerRoom/StaticBody2D" unique_id=1116212881 node_paths=PackedStringArray("target_spawn_point")]
-script = ExtResource("4_x0ka3")
-target_spawn_point = NodePath("../../../HullGeneratorBlue/Node2D")
-
-[node name="door" type="CollisionShape2D" parent="HullScannerRoom/StaticBody2D/Area2D" unique_id=2066000740]
-position = Vector2(120.5, 23)
-scale = Vector2(0.5, 6.4)
-shape = SubResource("RectangleShape2D_omo0a")
-
-[node name="Camera2D" type="Camera2D" parent="HullScannerRoom" unique_id=2131969560]
-zoom = Vector2(3.5, 3.5)
-
 [node name="Sprite2D" type="Sprite2D" parent="HullScannerRoom" unique_id=2039205649]
 z_index = -2
 texture_filter = 1
@@ -165,8 +228,38 @@ position = Vector2(93, 22)
 [node name="Marker2D" type="Marker2D" parent="HullScannerRoom/Node2D" unique_id=1138733992]
 position = Vector2(0, 19)
 
+[node name="Node2D3" type="Node2D" parent="HullScannerRoom" unique_id=1279275931]
+position = Vector2(-103, 35)
+
+[node name="Marker2D" type="Marker2D" parent="HullScannerRoom/Node2D3" unique_id=1080682614]
+position = Vector2(0, -8)
+
+[node name="Area2D" type="Area2D" parent="HullScannerRoom" unique_id=1161320703 node_paths=PackedStringArray("target_camera_to_enable")]
+collision_layer = 0
+script = ExtResource("13_0h7mo")
+target_camera_to_enable = NodePath("../Camera2D")
+player_group_name = &"Player"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HullScannerRoom/Area2D" unique_id=519416033]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_0l7jo")
+
+[node name="Camera2D" type="Camera2D" parent="HullScannerRoom" unique_id=1829733208]
+enabled = false
+zoom = Vector2(3.5, 3.5)
+
+[node name="Area2D2" type="Area2D" parent="HullScannerRoom" unique_id=1116212881 node_paths=PackedStringArray("target_spawn_point")]
+script = ExtResource("4_x0ka3")
+target_spawn_point = NodePath("../../LadderTop/Node2D/Marker2D")
+
+[node name="door" type="CollisionShape2D" parent="HullScannerRoom/Area2D2" unique_id=2066000740]
+position = Vector2(-120.5, 23)
+scale = Vector2(0.5, 6.4)
+shape = SubResource("RectangleShape2D_omo0a")
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=776629283 groups=["Player"]]
-position = Vector2(16, 100)
+z_index = 1
+position = Vector2(-484, 100)
 script = ExtResource("3_q6r6c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=280279395]
@@ -192,9 +285,9 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -214.0
+offset_left = -1088.0
 offset_top = -214.0
-offset_right = -64.0
+offset_right = -938.0
 offset_bottom = -64.0
 grow_horizontal = 0
 grow_vertical = 0
@@ -210,27 +303,19 @@ tip_size = 75.0
 deadzone_ratio = 0.25
 
 [node name="HullGeneratorBlue" type="Sprite2D" parent="." unique_id=587447327]
-position = Vector2(512, 64)
+position = Vector2(-1337, 480.00003)
 texture = ExtResource("9_hqns4")
 hframes = 5
 
-[node name="Area2D" type="Area2D" parent="HullGeneratorBlue" unique_id=503738795 node_paths=PackedStringArray("target_camera_to_enable", "target_camera_to_disable")]
+[node name="Area2D" type="Area2D" parent="HullGeneratorBlue" unique_id=503738795 node_paths=PackedStringArray("target_camera_to_enable")]
 collision_layer = 0
 script = ExtResource("13_0h7mo")
 target_camera_to_enable = NodePath("../Camera2D")
-target_camera_to_disable = NodePath("../../HullScannerRoom/Camera2D")
 player_group_name = &"Player"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HullGeneratorBlue/Area2D" unique_id=442987697]
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_uiupi")
-
-[node name="Sprite2D" type="Sprite2D" parent="HullGeneratorBlue" unique_id=1338909072]
-z_index = -2
-texture_filter = 1
-material = SubResource("ShaderMaterial_03dd7")
-scale = Vector2(1.5, 1)
-texture = ExtResource("2_ir8iy")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HullGeneratorBlue" unique_id=365563744]
 texture_filter = 1
@@ -246,12 +331,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_4d7sh")
 text = "	Generator Room"
-
-[node name="Node2D" type="Node2D" parent="HullGeneratorBlue" unique_id=1579930508]
-position = Vector2(-90, 30)
-
-[node name="Marker2D" type="Marker2D" parent="HullGeneratorBlue/Node2D" unique_id=474250370]
-position = Vector2(0, 19)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="HullGeneratorBlue" unique_id=626642954]
 
@@ -286,16 +365,495 @@ process_material = SubResource("ParticleProcessMaterial_tt2tb")
 
 [node name="Area2D2" type="Area2D" parent="HullGeneratorBlue" unique_id=1988654226 node_paths=PackedStringArray("target_spawn_point")]
 script = ExtResource("4_x0ka3")
-target_spawn_point = NodePath("../../HullScannerRoom/Node2D/Marker2D")
+target_spawn_point = NodePath("../../LadderBottom/Node2D2/Marker2D")
 
 [node name="door" type="CollisionShape2D" parent="HullGeneratorBlue/Area2D2" unique_id=69076689]
-position = Vector2(-119.5, 24)
+position = Vector2(121.5, 24)
 scale = Vector2(0.5, 6.4)
 shape = SubResource("RectangleShape2D_omo0a")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1457985268]
+[node name="Node2D" type="Node2D" parent="HullGeneratorBlue" unique_id=1718707632]
+position = Vector2(102, 21)
+
+[node name="Marker2D" type="Marker2D" parent="HullGeneratorBlue/Node2D" unique_id=682494418]
+position = Vector2(0, 19)
+
+[node name="Sprite2D" type="Sprite2D" parent="HullGeneratorBlue" unique_id=960271215]
+z_index = -2
+texture_filter = 1
+material = SubResource("ShaderMaterial_x0ka3")
+position = Vector2(0, -63.000008)
+scale = Vector2(1.5, 1.4921874)
+texture = ExtResource("2_ir8iy")
+
+[node name="dark1" type="Sprite2D" parent="." unique_id=1457985268]
+z_index = -1
+z_as_relative = false
+texture_filter = 1
+position = Vector2(-146.00005, 64.00001)
+scale = Vector2(3.1796875, 0.53906256)
+texture = ExtResource("14_nr8wp")
+
+[node name="LivingQuarters" type="Sprite2D" parent="." unique_id=1778318180]
+position = Vector2(-484, 64)
+texture = ExtResource("15_d2bti")
+
+[node name="Sprite2D2" type="Sprite2D" parent="LivingQuarters" unique_id=1805122023]
+z_index = -2
+texture_filter = 1
+material = SubResource("ShaderMaterial_03dd7")
+position = Vector2(114.000015, 0)
+scale = Vector2(2.390625, 1)
+texture = ExtResource("2_ir8iy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LivingQuarters" unique_id=2074048009]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LivingQuarters/StaticBody2D" unique_id=852021182]
+position = Vector2(0, 61)
+shape = SubResource("RectangleShape2D_tt2tb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="LivingQuarters/StaticBody2D" unique_id=49290808]
+position = Vector2(61, 0)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_tt2tb")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="LivingQuarters/StaticBody2D" unique_id=710141176]
+position = Vector2(-61, 0)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_tt2tb")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="LivingQuarters/StaticBody2D" unique_id=2141552762]
+position = Vector2(0, -61)
+shape = SubResource("RectangleShape2D_tt2tb")
+
+[node name="Camera2D" type="Camera2D" parent="LivingQuarters" unique_id=1542139928]
+zoom = Vector2(3.5, 3.5)
+
+[node name="Area2D" type="Area2D" parent="LivingQuarters" unique_id=470470171 node_paths=PackedStringArray("target_camera_to_enable")]
+collision_layer = 0
+script = ExtResource("13_0h7mo")
+target_camera_to_enable = NodePath("../Camera2D")
+player_group_name = &"Player"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LivingQuarters/Area2D" unique_id=29265214]
+shape = SubResource("RectangleShape2D_03dd7")
+
+[node name="Area2D2" type="Area2D" parent="LivingQuarters" unique_id=1987661390 node_paths=PackedStringArray("target_spawn_point")]
+script = ExtResource("4_x0ka3")
+target_spawn_point = NodePath("../../LadderTop/Node2D2/Marker2D")
+
+[node name="door" type="CollisionShape2D" parent="LivingQuarters/Area2D2" unique_id=160285399]
+position = Vector2(57.5, 28)
+scale = Vector2(0.5, 6.4)
+shape = SubResource("RectangleShape2D_omo0a")
+
+[node name="Node2D2" type="Node2D" parent="LivingQuarters" unique_id=1863602044]
+position = Vector2(48, 30)
+
+[node name="Marker2D" type="Marker2D" parent="LivingQuarters/Node2D2" unique_id=1214012841]
+position = Vector2(-9, -8)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="LivingQuarters" unique_id=477672780]
+texture_filter = 1
+material = SubResource("ShaderMaterial_tt2tb")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -64.0
+offset_right = -64.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+theme = ExtResource("4_4d7sh")
+text = "Living Quarters"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="LivingQuarters" unique_id=1258904216]
 z_index = -1
 texture_filter = 1
-position = Vector2(315, 64)
-scale = Vector2(1.5, 0.49)
+material = SubResource("ShaderMaterial_hqns4")
+scale = Vector2(1.5, 1)
+texture = ExtResource("2_x0ka3")
+lifetime = 4.0
+process_material = SubResource("ParticleProcessMaterial_tt2tb")
+
+[node name="LadderTop" type="Sprite2D" parent="." unique_id=1819032076]
+position = Vector2(-192, 64)
+texture = ExtResource("16_ta5nu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LadderTop" unique_id=2040699298]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LadderTop/StaticBody2D" unique_id=1272178247]
+position = Vector2(0, 60)
+shape = SubResource("RectangleShape2D_t0cus")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="LadderTop/StaticBody2D" unique_id=1599626792]
+position = Vector2(0, -68)
+shape = SubResource("RectangleShape2D_t0cus")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="LadderTop/StaticBody2D" unique_id=1825602693]
+position = Vector2(-66.5, -4)
+shape = SubResource("RectangleShape2D_gd040")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="LadderTop/StaticBody2D" unique_id=1064430463]
+position = Vector2(66.5, -4)
+shape = SubResource("RectangleShape2D_gd040")
+
+[node name="Area2D2" type="Area2D" parent="LadderTop" unique_id=1579825465 node_paths=PackedStringArray("target_spawn_point")]
+position = Vector2(256, 0)
+script = ExtResource("4_x0ka3")
+target_spawn_point = NodePath("../../LivingQuarters/Node2D2/Marker2D")
+
+[node name="door" type="CollisionShape2D" parent="LadderTop/Area2D2" unique_id=2041705798]
+position = Vector2(-317.5, 24)
+scale = Vector2(0.5, 6.4)
+shape = SubResource("RectangleShape2D_omo0a")
+
+[node name="Node2D2" type="Node2D" parent="LadderTop" unique_id=709729151]
+position = Vector2(-42, 30)
+
+[node name="Marker2D" type="Marker2D" parent="LadderTop/Node2D2" unique_id=24605031]
+position = Vector2(-9, -8)
+
+[node name="Camera2D" type="Camera2D" parent="LadderTop" unique_id=409504585]
+zoom = Vector2(3.5, 3.5)
+
+[node name="Area2D" type="Area2D" parent="LadderTop" unique_id=1865039455 node_paths=PackedStringArray("target_camera_to_enable")]
+collision_layer = 0
+script = ExtResource("13_0h7mo")
+target_camera_to_enable = NodePath("../Camera2D")
+player_group_name = &"Player"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LadderTop/Area2D" unique_id=1336378733]
+shape = SubResource("RectangleShape2D_03dd7")
+
+[node name="Area2D3" type="Area2D" parent="LadderTop" unique_id=381197700 node_paths=PackedStringArray("target_spawn_point")]
+position = Vector2(379, 0)
+script = ExtResource("4_x0ka3")
+target_spawn_point = NodePath("../../HullScannerRoom/Node2D3/Marker2D")
+
+[node name="door" type="CollisionShape2D" parent="LadderTop/Area2D3" unique_id=1501553114]
+position = Vector2(-317.5, 24)
+scale = Vector2(0.5, 6.4)
+shape = SubResource("RectangleShape2D_omo0a")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="LadderTop" unique_id=674590361]
+texture_filter = 1
+material = SubResource("ShaderMaterial_tt2tb")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -64.0
+offset_right = -64.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+theme = ExtResource("4_4d7sh")
+text = "Top of Ladder"
+
+[node name="Node2D" type="Node2D" parent="LadderTop" unique_id=1579930508]
+position = Vector2(48, 30)
+
+[node name="Marker2D" type="Marker2D" parent="LadderTop/Node2D" unique_id=474250370]
+position = Vector2(0, 19)
+
+[node name="Node2D3" type="Node2D" parent="LadderTop" unique_id=1216031514]
+position = Vector2(10, 30)
+
+[node name="Marker2D" type="Marker2D" parent="LadderTop/Node2D3" unique_id=509524965]
+
+[node name="Control" type="Control" parent="LadderTop" unique_id=692374943]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="LadderTop/Control" unique_id=1412548042 node_paths=PackedStringArray("target_spawn_point")]
+texture_filter = 1
+material = SubResource("ShaderMaterial_k73cj")
+layout_mode = 0
+offset_left = 21.0
+offset_top = 7.0
+offset_right = 61.0
+offset_bottom = 47.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tt2tb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_03dd7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0cus")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_gd040")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0l7jo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p0so7")
+icon = ExtResource("17_flf07")
+script = ExtResource("18_rjqkl")
+target_spawn_point = NodePath("../../../LadderBottom/Node2D/Marker2D")
+
+[node name="dark2" type="Sprite2D" parent="." unique_id=1833129147]
+position = Vector2(-157.5, 480)
+scale = Vector2(3.4179688, 0.5390625)
 texture = ExtResource("14_nr8wp")
+
+[node name="LadderBottom" type="Sprite2D" parent="." unique_id=566967576]
+position = Vector2(-193, 480)
+texture = ExtResource("19_fs4d3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LadderBottom" unique_id=1561492529]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LadderBottom/StaticBody2D" unique_id=1773842072]
+position = Vector2(0, 60)
+shape = SubResource("RectangleShape2D_p0so7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="LadderBottom/StaticBody2D" unique_id=1414589498]
+position = Vector2(0, -68)
+shape = SubResource("RectangleShape2D_p0so7")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="LadderBottom/StaticBody2D" unique_id=1170631609]
+position = Vector2(73, -4)
+shape = SubResource("RectangleShape2D_2s7pg")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="LadderBottom/StaticBody2D" unique_id=135588151]
+position = Vector2(-73, -4)
+shape = SubResource("RectangleShape2D_2s7pg")
+
+[node name="Sprite2D" type="Sprite2D" parent="LadderBottom" unique_id=561294863]
+z_index = -2
+texture_filter = 1
+material = SubResource("ShaderMaterial_x0ka3")
+position = Vector2(0, -63.000008)
+scale = Vector2(1.5, 1.4921874)
+texture = ExtResource("2_ir8iy")
+
+[node name="Node2D" type="Node2D" parent="LadderBottom" unique_id=377370850]
+position = Vector2(-1, 19)
+
+[node name="Marker2D" type="Marker2D" parent="LadderBottom/Node2D" unique_id=2048159109]
+position = Vector2(0, 19)
+
+[node name="Control" type="Control" parent="LadderBottom" unique_id=336522187]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="LadderBottom/Control" unique_id=834103673 node_paths=PackedStringArray("target_spawn_point")]
+z_index = 1
+texture_filter = 1
+material = SubResource("ShaderMaterial_k73cj")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 17.0
+offset_top = 21.0
+offset_right = 49.0
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.1415927
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tt2tb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_03dd7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0cus")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_gd040")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0l7jo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p0so7")
+button_mask = 7
+icon = ExtResource("17_flf07")
+script = ExtResource("18_rjqkl")
+target_spawn_point = NodePath("../../../LadderTop/Node2D3/Marker2D")
+
+[node name="Area2D" type="Area2D" parent="LadderBottom" unique_id=1637262305 node_paths=PackedStringArray("target_camera_to_enable")]
+collision_layer = 0
+script = ExtResource("13_0h7mo")
+target_camera_to_enable = NodePath("../Camera2D")
+player_group_name = &"Player"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LadderBottom/Area2D" unique_id=481483691]
+shape = SubResource("RectangleShape2D_03dd7")
+
+[node name="Camera2D" type="Camera2D" parent="LadderBottom" unique_id=382099388]
+zoom = Vector2(3.5, 3.5)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="LadderBottom" unique_id=1303510903]
+texture_filter = 1
+material = SubResource("ShaderMaterial_tt2tb")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -64.0
+offset_right = -64.0
+offset_bottom = -120.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+theme = ExtResource("4_4d7sh")
+text = "Bottom of Ladder"
+
+[node name="Area2D2" type="Area2D" parent="LadderBottom" unique_id=470245337 node_paths=PackedStringArray("target_spawn_point")]
+script = ExtResource("4_x0ka3")
+target_spawn_point = NodePath("../../HullGeneratorBlue/Node2D/Marker2D")
+
+[node name="door" type="CollisionShape2D" parent="LadderBottom/Area2D2" unique_id=548480522]
+position = Vector2(-61.5, 24)
+scale = Vector2(0.5, 6.4)
+shape = SubResource("RectangleShape2D_omo0a")
+
+[node name="Node2D2" type="Node2D" parent="LadderBottom" unique_id=775510150]
+position = Vector2(-47, 30)
+
+[node name="Marker2D" type="Marker2D" parent="LadderBottom/Node2D2" unique_id=923561811]
+position = Vector2(0, 19)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="LadderBottom" unique_id=1650992462]
+z_index = -1
+texture_filter = 1
+material = SubResource("ShaderMaterial_hqns4")
+scale = Vector2(1.5, 1)
+texture = ExtResource("2_x0ka3")
+lifetime = 4.0
+process_material = SubResource("ParticleProcessMaterial_tt2tb")
+
+[node name="Node2D3" type="Node2D" parent="LadderBottom" unique_id=317287648]
+position = Vector2(40, 30)
+
+[node name="Marker2D" type="Marker2D" parent="LadderBottom/Node2D3" unique_id=578020345]
+position = Vector2(0, 19)
+
+[node name="Area2D3" type="Area2D" parent="LadderBottom" unique_id=1748282003 node_paths=PackedStringArray("target_spawn_point")]
+script = ExtResource("4_x0ka3")
+target_spawn_point = NodePath("../../SubDock/Node2D/Marker2D")
+
+[node name="door" type="CollisionShape2D" parent="LadderBottom/Area2D3" unique_id=261057132]
+position = Vector2(61.5, 24)
+scale = Vector2(0.5, 6.4)
+shape = SubResource("RectangleShape2D_omo0a")
+
+[node name="dark4" type="Sprite2D" parent="." unique_id=1987167977]
+z_index = -1
+position = Vector2(-1105, 480)
+scale = Vector2(2.8515625, 0.5390625)
+texture = ExtResource("14_nr8wp")
+
+[node name="dark5" type="Sprite2D" parent="." unique_id=800249039]
+position = Vector2(-192, 197)
+scale = Vector2(0.539, 0.5390625)
+texture = ExtResource("14_nr8wp")
+
+[node name="SubDock" type="Sprite2D" parent="." unique_id=1267889877]
+position = Vector2(-809, 480)
+texture = ExtResource("20_fs4d3")
+hframes = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="SubDock" unique_id=51661048]
+z_index = -2
+texture_filter = 1
+material = SubResource("ShaderMaterial_x0ka3")
+position = Vector2(0, -63.000008)
+scale = Vector2(1.5, 1.4921874)
+texture = ExtResource("2_ir8iy")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="SubDock" unique_id=1444821141]
+z_index = -1
+texture_filter = 1
+material = SubResource("ShaderMaterial_hqns4")
+scale = Vector2(1.5, 1)
+texture = ExtResource("2_x0ka3")
+lifetime = 4.0
+process_material = SubResource("ParticleProcessMaterial_tt2tb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SubDock" unique_id=1573275014]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubDock/StaticBody2D" unique_id=1806755135]
+position = Vector2(0, 59)
+shape = SubResource("RectangleShape2D_txmia")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="SubDock/StaticBody2D" unique_id=431236609]
+position = Vector2(0, -59)
+shape = SubResource("RectangleShape2D_txmia")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="SubDock/StaticBody2D" unique_id=611123193]
+position = Vector2(-62, 0)
+shape = SubResource("RectangleShape2D_mhwy0")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="SubDock/StaticBody2D" unique_id=2108917582]
+position = Vector2(62, 0)
+shape = SubResource("RectangleShape2D_mhwy0")
+
+[node name="Area2D2" type="Area2D" parent="SubDock" unique_id=283590395 node_paths=PackedStringArray("target_spawn_point")]
+script = ExtResource("4_x0ka3")
+target_spawn_point = NodePath("../../LadderBottom/Node2D3/Marker2D")
+
+[node name="door" type="CollisionShape2D" parent="SubDock/Area2D2" unique_id=132056489]
+position = Vector2(-57.5, 22)
+scale = Vector2(0.5, 6.4)
+shape = SubResource("RectangleShape2D_omo0a")
+
+[node name="Camera2D" type="Camera2D" parent="SubDock" unique_id=2033665584]
+zoom = Vector2(3.5, 3.5)
+
+[node name="Area2D" type="Area2D" parent="SubDock" unique_id=1356620910 node_paths=PackedStringArray("target_camera_to_enable")]
+collision_layer = 0
+script = ExtResource("13_0h7mo")
+target_camera_to_enable = NodePath("../Camera2D")
+player_group_name = &"Player"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubDock/Area2D" unique_id=1743578735]
+shape = SubResource("RectangleShape2D_03dd7")
+
+[node name="Node2D" type="Node2D" parent="SubDock" unique_id=2102167031]
+position = Vector2(-38, 19)
+
+[node name="Marker2D" type="Marker2D" parent="SubDock/Node2D" unique_id=1276601986]
+position = Vector2(0, 19)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SubDock" unique_id=94424243]
+texture_filter = 1
+material = SubResource("ShaderMaterial_tt2tb")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -64.0
+offset_right = -64.0
+offset_bottom = -120.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+theme = ExtResource("4_4d7sh")
+text = "Submarine Dock"
+
+[node name="Control" type="Control" parent="SubDock" unique_id=1182808200]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="SubDock/Control" unique_id=265726943]
+texture_filter = 1
+material = SubResource("ShaderMaterial_t0cus")
+layout_mode = 0
+offset_left = -38.0
+offset_top = -27.0
+offset_right = 44.0
+offset_bottom = 4.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.6073981, 0.9368006, 0.9999998, 1)
+theme_override_colors/font_focus_color = Color(0.60784316, 0.9372549, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.60784316, 0.9372549, 1, 1)
+theme_override_colors/font_hover_color = Color(0.60784316, 0.9372549, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.60784316, 0.9372549, 1, 1)
+theme_override_colors/font_outline_color = Color(0.60784316, 0.9372549, 1, 1)
+theme_override_fonts/font = ExtResource("21_7vxoj")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5ggaw")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_txmia")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mhwy0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8hhmu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hndkw")
+text = "DESCEND"
+script = ExtResource("22_ei405")
+target_scene = "uid://b3jf74lwqju8j"

@@ -1,0 +1,358 @@
+[gd_scene format=3 uid="uid://b3jf74lwqju8j"]
+
+[ext_resource type="Texture2D" uid="uid://turebeow8rca" path="res://art/ctusene/Going in to the submersible Good luck.png" id="1_5bhr3"]
+[ext_resource type="Script" uid="uid://c8yeeulm5cecj" path="res://cutscenemainmenu.gd" id="2_dx4jc"]
+[ext_resource type="FontFile" uid="uid://cwnjamwvqbvfy" path="res://art/font and other stuff/evilgamefont.ttf" id="3_62p3d"]
+[ext_resource type="Texture2D" uid="uid://b1xnnvx4jjln5" path="res://art/ui/skin thing.png" id="4_luma1"]
+[ext_resource type="Texture2D" uid="uid://b13q7kdx05dr7" path="res://color/black.png" id="5_62p3d"]
+[ext_resource type="Script" uid="uid://muw68cm1kawu" path="res://fade out.gd" id="6_luma1"]
+[ext_resource type="Script" uid="uid://b4m2om7kay5g3" path="res://ubmarine movement.gd" id="7_yy0es"]
+[ext_resource type="Texture2D" uid="uid://crq0mbpks2npr" path="res://art/Boat/subnmersibe.png" id="8_m8w7g"]
+[ext_resource type="Script" uid="uid://cq2t5veqr7usd" path="res://camrea chgange.gd" id="9_m8w7g"]
+[ext_resource type="Texture2D" uid="uid://svtli0dmratx" path="res://art/ui/thumbpad1.png" id="9_n2h6l"]
+[ext_resource type="Texture2D" uid="uid://cejcvvqk6rf33" path="res://art/Boat/subnmersibeflipped.png" id="10_n2h6l"]
+[ext_resource type="Texture2D" uid="uid://dtxf87hi3bwx4" path="res://art/ui/thumbpad2.png" id="10_nmdv6"]
+[ext_resource type="Shader" uid="uid://blv1y2bagkkto" path="res://themes and more/wavytext.gdshader" id="11_auru0"]
+[ext_resource type="Texture2D" uid="uid://bdo82rdd70dgw" path="res://art/oceanwater.png" id="12_wo85t"]
+[ext_resource type="Script" uid="uid://pask3a7tk7lk" path="res://followscript.gd" id="13_ndryc"]
+[ext_resource type="Texture2D" uid="uid://xavuf3wagdj3" path="res://art/plants/seaground.png" id="14_l37nm"]
+[ext_resource type="Texture2D" uid="uid://dswgcbo0p4ogc" path="res://art/plants/sand.png" id="15_mvqe8"]
+[ext_resource type="Texture2D" uid="uid://1v7lnrwcf2fp" path="res://art/plants/clay.png" id="16_mvqe8"]
+[ext_resource type="Script" uid="uid://cuvvcfg7eopme" path="res://onoffstick.gd" id="16_wo85t"]
+[ext_resource type="Texture2D" uid="uid://cr76dufwpmhva" path="res://art/plants/seaweed_Sheet.png" id="17_auru0"]
+[ext_resource type="Script" uid="uid://d1pjihjo56l2j" path="res://frameanimationplayer.gd" id="18_1tbp4"]
+[ext_resource type="Texture2D" uid="uid://brmmu5erwhkib" path="res://art/plants/searock2.png" id="19_g2n2c"]
+[ext_resource type="Texture2D" uid="uid://yhf7pg2eiksq" path="res://art/plants/searock1.png" id="20_30qot"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tt2tb"]
+size = Vector2(124, 40)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tt2tb"]
+shader = ExtResource("11_auru0")
+shader_parameter/height = 2.0
+shader_parameter/frequency = 5.0
+shader_parameter/speed = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_03dd7"]
+size = Vector2(2933.5, 185.875)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g2n2c"]
+shader = ExtResource("11_auru0")
+shader_parameter/height = 1.0
+shader_parameter/frequency = 10.0
+shader_parameter/speed = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jsd17"]
+texture = ExtResource("9_n2h6l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8q05f"]
+texture = ExtResource("10_nmdv6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wo85t"]
+texture = ExtResource("9_n2h6l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ndryc"]
+texture = ExtResource("10_nmdv6")
+
+[node name="Node2D" type="Node2D" unique_id=1302691193]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=571557765]
+z_index = 2
+position = Vector2(400, 225)
+texture = ExtResource("1_5bhr3")
+hframes = 5
+vframes = 16
+script = ExtResource("2_dx4jc")
+
+[node name="Control" type="Control" parent="." unique_id=1665255259]
+z_index = 2
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Control" unique_id=1097926852]
+z_index = 2
+layout_mode = 0
+offset_left = 32.0
+offset_top = 358.0
+offset_right = 184.0
+offset_bottom = 418.0
+theme_override_fonts/font = ExtResource("3_62p3d")
+text = "SKIB CUSTENE"
+icon = ExtResource("4_luma1")
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=643521659]
+offset = Vector2(400, 235)
+zoom = Vector2(1.495, 1.495)
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=494934195 node_paths=PackedStringArray("cutscene")]
+z_index = 1
+texture_filter = 1
+position = Vector2(400, 235)
+scale = Vector2(5, 5)
+texture = ExtResource("5_62p3d")
+script = ExtResource("6_luma1")
+cutscene = NodePath("../Sprite2D")
+
+[node name="submerine gfame" type="Node2D" parent="." unique_id=719127998]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="submerine gfame" unique_id=228342678]
+position = Vector2(392, 238)
+script = ExtResource("7_yy0es")
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/CharacterBody2D" unique_id=1863763962]
+texture = ExtResource("8_m8w7g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/CharacterBody2D" unique_id=1923783611]
+shape = SubResource("RectangleShape2D_tt2tb")
+
+[node name="Camera2D" type="Camera2D" parent="submerine gfame/CharacterBody2D" unique_id=1840429807 node_paths=PackedStringArray("cutscene", "cutscene_camera", "main_camera")]
+enabled = false
+script = ExtResource("9_m8w7g")
+cutscene = NodePath("../../../Sprite2D")
+cutscene_camera = NodePath("../../../Camera2D")
+main_camera = NodePath(".")
+
+[node name="Sprite2D2" type="Sprite2D" parent="submerine gfame/CharacterBody2D" unique_id=915936020]
+texture = ExtResource("10_n2h6l")
+
+[node name="Sprite2D3" type="Sprite2D" parent="submerine gfame/CharacterBody2D" unique_id=651093772]
+z_index = -2
+texture_filter = 1
+material = SubResource("ShaderMaterial_tt2tb")
+position = Vector2(0, -1.5258789e-05)
+scale = Vector2(20, 20)
+texture = ExtResource("12_wo85t")
+script = ExtResource("13_ndryc")
+
+[node name="ground" type="Node2D" parent="submerine gfame" unique_id=1477988775]
+position = Vector2(0, 600)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="submerine gfame/ground" unique_id=1135755357]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/ground/StaticBody2D" unique_id=1481515442]
+position = Vector2(0, 49.0625)
+shape = SubResource("RectangleShape2D_03dd7")
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/ground/StaticBody2D" unique_id=65987050]
+z_index = 1
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, -92)
+scale = Vector2(4, 4)
+texture = ExtResource("14_l37nm")
+region_enabled = true
+region_rect = Rect2(0, 0, 1024, 32)
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/ground/StaticBody2D/Sprite2D" unique_id=718783349]
+z_index = 1
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, 24)
+texture = ExtResource("15_mvqe8")
+region_enabled = true
+region_rect = Rect2(32, 32, 1024, 16)
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/ground/StaticBody2D/Sprite2D/Sprite2D" unique_id=93645309]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, 40)
+texture = ExtResource("16_mvqe8")
+region_enabled = true
+region_rect = Rect2(32, 32, 1024, 64)
+
+[node name="plants" type="Node2D" parent="submerine gfame/ground" unique_id=1602046548]
+
+[node name="seewad" type="Sprite2D" parent="submerine gfame/ground/plants" unique_id=1615727253]
+z_index = -1
+texture_filter = 1
+material = SubResource("ShaderMaterial_g2n2c")
+position = Vector2(347, -108.99999)
+scale = Vector2(5, 5)
+texture = ExtResource("17_auru0")
+hframes = 7
+script = ExtResource("18_1tbp4")
+fps = 3.0
+
+[node name="seewad2" type="Sprite2D" parent="submerine gfame/ground/plants" unique_id=164038748]
+z_index = -1
+texture_filter = 1
+material = SubResource("ShaderMaterial_g2n2c")
+position = Vector2(1183, -101.99999)
+scale = Vector2(5, 5)
+texture = ExtResource("17_auru0")
+hframes = 7
+script = ExtResource("18_1tbp4")
+fps = 4.0
+
+[node name="seewad3" type="Sprite2D" parent="submerine gfame/ground/plants" unique_id=540525275]
+z_index = -1
+texture_filter = 1
+material = SubResource("ShaderMaterial_g2n2c")
+position = Vector2(-299.00006, -216.99998)
+scale = Vector2(5, 5)
+texture = ExtResource("17_auru0")
+hframes = 7
+script = ExtResource("18_1tbp4")
+fps = 3.0
+
+[node name="seewad4" type="Sprite2D" parent="submerine gfame/ground/plants" unique_id=1727176357]
+z_index = -1
+texture_filter = 1
+material = SubResource("ShaderMaterial_g2n2c")
+position = Vector2(-720.9999, -97.99999)
+scale = Vector2(5, 5)
+texture = ExtResource("17_auru0")
+hframes = 7
+script = ExtResource("18_1tbp4")
+fps = 3.0
+
+[node name="decor" type="Node2D" parent="submerine gfame/ground" unique_id=1660390202]
+
+[node name="rohck" type="Sprite2D" parent="submerine gfame/ground/decor" unique_id=1233994519]
+position = Vector2(473, -114.335)
+scale = Vector2(5, 5)
+texture = ExtResource("19_g2n2c")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="submerine gfame/ground/decor/rohck" unique_id=87415309]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="submerine gfame/ground/decor/rohck/StaticBody2D" unique_id=1625059950]
+polygon = PackedVector2Array(0.20000458, -10.800003, -4.7999954, -10.800003, -10.399994, 3, -12.999992, 15.799995, 14, 16, 7.800003, -8.800003, 4.800003, -10.800003)
+
+[node name="rohck2" type="Sprite2D" parent="submerine gfame/ground/decor" unique_id=913845539]
+position = Vector2(943.99994, -92.00001)
+scale = Vector2(5, 5)
+texture = ExtResource("19_g2n2c")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="submerine gfame/ground/decor/rohck2" unique_id=460702699]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="submerine gfame/ground/decor/rohck2/StaticBody2D" unique_id=605846948]
+polygon = PackedVector2Array(0.20000458, -10.800003, -4.7999954, -10.800003, -10.399994, 3, -12.999992, 15.799995, 14, 16, 7.800003, -8.800003, 4.800003, -10.800003)
+
+[node name="rohck3" type="Sprite2D" parent="submerine gfame/ground/decor" unique_id=136275326]
+position = Vector2(1554, -95.00001)
+scale = Vector2(5, 5)
+texture = ExtResource("19_g2n2c")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="submerine gfame/ground/decor/rohck3" unique_id=66752073]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="submerine gfame/ground/decor/rohck3/StaticBody2D" unique_id=811401996]
+polygon = PackedVector2Array(0.20000458, -10.800003, -4.7999954, -10.800003, -10.399994, 3, -12.999992, 15.799995, 14, 16, 7.800003, -8.800003, 4.800003, -10.800003)
+
+[node name="smallrohk" type="Sprite2D" parent="submerine gfame/ground/decor" unique_id=1016141719]
+position = Vector2(593, -113)
+scale = Vector2(5, 5)
+texture = ExtResource("20_30qot")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="submerine gfame/ground/decor/smallrohk" unique_id=1581368033]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="submerine gfame/ground/decor/smallrohk/StaticBody2D" unique_id=1146707428]
+polygon = PackedVector2Array(-2, 6.199997, -6.199997, 9, -11, 12.599998, -14, 16, 16, 16, 12.800003, 10.799995, 1.800003, 7)
+
+[node name="smallrohk2" type="Sprite2D" parent="submerine gfame/ground/decor" unique_id=1677383107]
+position = Vector2(262.00003, -105)
+scale = Vector2(5, 5)
+texture = ExtResource("20_30qot")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="submerine gfame/ground/decor/smallrohk2" unique_id=260418859]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="submerine gfame/ground/decor/smallrohk2/StaticBody2D" unique_id=1037388075]
+polygon = PackedVector2Array(-2, 6.199997, -6.199997, 9, -11, 12.599998, -14, 16, 16, 16, 12.800003, 10.799995, 1.800003, 7)
+
+[node name="smallrohk3" type="Sprite2D" parent="submerine gfame/ground/decor" unique_id=273879656]
+position = Vector2(-127.99994, -105)
+scale = Vector2(5, 5)
+texture = ExtResource("20_30qot")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="submerine gfame/ground/decor/smallrohk3" unique_id=366148798]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="submerine gfame/ground/decor/smallrohk3/StaticBody2D" unique_id=1245079015]
+polygon = PackedVector2Array(-2, 6.199997, -6.199997, 9, -11, 12.599998, -14, 16, 16, 16, 12.800003, 10.799995, 1.800003, 7)
+
+[node name="smallrohk4" type="Sprite2D" parent="submerine gfame/ground/decor" unique_id=203724232]
+position = Vector2(-229.99994, -101)
+scale = Vector2(5, 5)
+texture = ExtResource("20_30qot")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="submerine gfame/ground/decor/smallrohk4" unique_id=474453883]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="submerine gfame/ground/decor/smallrohk4/StaticBody2D" unique_id=1538692846]
+polygon = PackedVector2Array(-2, 6.199997, -6.199997, 9, -11, 12.599998, -14, 16, 16, 16, 12.800003, 10.799995, 1.800003, 7)
+
+[node name="smallrohk5" type="Sprite2D" parent="submerine gfame/ground/decor" unique_id=1619394768]
+position = Vector2(1397, -107)
+scale = Vector2(5, 5)
+texture = ExtResource("20_30qot")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="submerine gfame/ground/decor/smallrohk5" unique_id=68608455]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="submerine gfame/ground/decor/smallrohk5/StaticBody2D" unique_id=2017488149]
+polygon = PackedVector2Array(-2, 6.199997, -6.199997, 9, -11, 12.599998, -14, 16, 16, 16, 12.800003, 10.799995, 1.800003, 7)
+
+[node name="smallrohk6" type="Sprite2D" parent="submerine gfame/ground/decor" unique_id=2114045184]
+position = Vector2(-677.9999, -104)
+scale = Vector2(5, 5)
+texture = ExtResource("20_30qot")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="submerine gfame/ground/decor/smallrohk6" unique_id=1621964944]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="submerine gfame/ground/decor/smallrohk6/StaticBody2D" unique_id=648749161]
+polygon = PackedVector2Array(-2, 6.199997, -6.199997, 9, -11, 12.599998, -14, 16, 16, 16, 12.800003, 10.799995, 1.800003, 7)
+
+[node name="rohck4" type="Sprite2D" parent="submerine gfame/ground/decor" unique_id=1694924176]
+z_index = -1
+position = Vector2(-310.99976, -101.00001)
+scale = Vector2(5, 5)
+texture = ExtResource("19_g2n2c")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="submerine gfame/ground/decor/rohck4" unique_id=1100351342]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="submerine gfame/ground/decor/rohck4/StaticBody2D" unique_id=1629480533]
+polygon = PackedVector2Array(0.20000458, -10.800003, -4.7999954, -10.800003, -10.399994, 3, -12.999992, 15.799995, 14, 16, 7.800003, -8.800003, 4.800003, -10.800003)
+
+[node name="rohck5" type="Sprite2D" parent="submerine gfame/ground/decor" unique_id=937909072]
+position = Vector2(-889.99976, -114.00001)
+scale = Vector2(5, 5)
+texture = ExtResource("19_g2n2c")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="submerine gfame/ground/decor/rohck5" unique_id=424470444]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="submerine gfame/ground/decor/rohck5/StaticBody2D" unique_id=1971658190]
+polygon = PackedVector2Array(0.20000458, -10.800003, -4.7999954, -10.800003, -10.399994, 3, -12.999992, 15.799995, 14, 16, 7.800003, -8.800003, 4.800003, -10.800003)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1725138040]
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="CanvasLayer" unique_id=1844914327 node_paths=PackedStringArray("shortcut_context", "cutscene")]
+custom_minimum_size = Vector2(150, 150)
+custom_maximum_size = Vector2(300, 300)
+propagate_maximum_size = true
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1088.0
+offset_top = -214.0
+offset_right = -938.0
+offset_bottom = -64.0
+grow_horizontal = 0
+grow_vertical = 0
+offset_transform_enabled = true
+mouse_default_cursor_shape = 2
+shortcut_context = NodePath("")
+theme_override_styles/normal_joystick = SubResource("StyleBoxTexture_jsd17")
+theme_override_styles/normal_tip = SubResource("StyleBoxTexture_8q05f")
+theme_override_styles/pressed_joystick = SubResource("StyleBoxTexture_wo85t")
+theme_override_styles/pressed_tip = SubResource("StyleBoxTexture_ndryc")
+joystick_size = 150.0
+tip_size = 75.0
+deadzone_ratio = 0.25
+script = ExtResource("16_wo85t")
+cutscene = NodePath("../../Sprite2D")
+
+[connection signal="finished" from="Sprite2D" to="Control/Button" method="hide"]
+[connection signal="skipped" from="Sprite2D" to="Control/Button" method="hide"]
+[connection signal="pressed" from="Control/Button" to="Sprite2D" method="skip_cutscene"]
