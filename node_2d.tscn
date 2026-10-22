@@ -247,6 +247,7 @@ shape = SubResource("RectangleShape2D_0l7jo")
 [node name="Camera2D" type="Camera2D" parent="HullScannerRoom" unique_id=1829733208]
 enabled = false
 zoom = Vector2(3.5, 3.5)
+limit_top = -1000
 
 [node name="Area2D2" type="Area2D" parent="HullScannerRoom" unique_id=1116212881 node_paths=PackedStringArray("target_spawn_point")]
 script = ExtResource("4_x0ka3")
@@ -353,6 +354,7 @@ shape = SubResource("RectangleShape2D_nas6c")
 [node name="Camera2D" type="Camera2D" parent="HullGeneratorBlue" unique_id=1234374401]
 position = Vector2(0.5, 0)
 zoom = Vector2(3.5, 3.5)
+limit_top = -1000
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="HullGeneratorBlue" unique_id=467864572]
 z_index = -1
@@ -428,6 +430,7 @@ shape = SubResource("RectangleShape2D_tt2tb")
 
 [node name="Camera2D" type="Camera2D" parent="LivingQuarters" unique_id=1542139928]
 zoom = Vector2(3.5, 3.5)
+limit_top = -1000
 
 [node name="Area2D" type="Area2D" parent="LivingQuarters" unique_id=470470171 node_paths=PackedStringArray("target_camera_to_enable")]
 collision_layer = 0
@@ -518,6 +521,7 @@ position = Vector2(-9, -8)
 
 [node name="Camera2D" type="Camera2D" parent="LadderTop" unique_id=409504585]
 zoom = Vector2(3.5, 3.5)
+limit_top = -1000
 
 [node name="Area2D" type="Area2D" parent="LadderTop" unique_id=1865039455 node_paths=PackedStringArray("target_camera_to_enable")]
 collision_layer = 0
@@ -677,6 +681,7 @@ shape = SubResource("RectangleShape2D_03dd7")
 
 [node name="Camera2D" type="Camera2D" parent="LadderBottom" unique_id=382099388]
 zoom = Vector2(3.5, 3.5)
+limit_top = -1000
 
 [node name="RichTextLabel" type="RichTextLabel" parent="LadderBottom" unique_id=1303510903]
 texture_filter = 1
@@ -795,6 +800,7 @@ shape = SubResource("RectangleShape2D_omo0a")
 
 [node name="Camera2D" type="Camera2D" parent="SubDock" unique_id=2033665584]
 zoom = Vector2(3.5, 3.5)
+limit_top = -1000
 
 [node name="Area2D" type="Area2D" parent="SubDock" unique_id=1356620910 node_paths=PackedStringArray("target_camera_to_enable")]
 collision_layer = 0
