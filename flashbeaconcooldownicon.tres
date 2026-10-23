@@ -1,0 +1,6 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://dfg37r0laxnh4"]
+
+[ext_resource type="Texture2D" uid="uid://bk7llqda407cw" path="res://art/ui/flashbeaconcooldown.png" id="1_la1g4"]
+
+[resource]
+texture = ExtResource("1_la1g4")

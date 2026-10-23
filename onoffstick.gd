@@ -1,11 +1,11 @@
-extends Control  # (Change to Node2D or whatever type your joystick node is if it's not a Control)
+extends CanvasLayer
 
 @export var cutscene: SpriteCutscene  ## Drag your SpriteCutscene node here in the Inspector
-@export var hide_during_cutscene: bool = true  ## If true, hides the joystick while playing and shows it when done
+@export var hide_during_cutscene: bool = true  ## If true, hides the canvas layer while playing and shows it when done
 
 func _ready() -> void:
 	if not cutscene:
-		push_warning("SpriteCutscene node is unassigned on the joystick script!")
+		push_warning("SpriteCutscene node is unassigned on the CanvasLayer script!")
 		return
 	
 	# Initial state setup
@@ -17,7 +17,7 @@ func _ready() -> void:
 	cutscene.skipped.connect(_on_cutscene_ended)
 
 func _on_cutscene_ended() -> void:
-	# Toggle visibility back on (or off, depending on your preference)
+	# Toggle visibility back on
 	visible = true
 	
 	# Optional: Disconnect signals so this only happens once

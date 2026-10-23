@@ -4,6 +4,7 @@
 [ext_resource type="Shader" uid="uid://c7uvlfql4e82o" path="res://themes and more/water.gdshader" id="2_hqns4"]
 [ext_resource type="Texture2D" uid="uid://d0jjk2lkx7gtc" path="res://color/oceangradient.png" id="2_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://cougscpufxgvy" path="res://art/fx/darkbubble.png" id="2_x0ka3"]
+[ext_resource type="Script" uid="uid://d1pjihjo56l2j" path="res://frameanimationplayer.gd" id="3_e8dv2"]
 [ext_resource type="Script" uid="uid://d2kh2xv35es6p" path="res://character_body_2d.gd" id="3_q6r6c"]
 [ext_resource type="Shader" uid="uid://blv1y2bagkkto" path="res://themes and more/wavytext.gdshader" id="3_rj586"]
 [ext_resource type="Theme" uid="uid://q50ntxq2p0qf" path="res://themes and more/font.tres" id="4_4d7sh"]
@@ -168,6 +169,7 @@ texture_filter = 1
 position = Vector2(128, 64)
 texture = ExtResource("1_ta5nu")
 hframes = 5
+script = ExtResource("3_e8dv2")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="HullScannerRoom" unique_id=434633549]
 z_index = -1
@@ -247,7 +249,6 @@ shape = SubResource("RectangleShape2D_0l7jo")
 [node name="Camera2D" type="Camera2D" parent="HullScannerRoom" unique_id=1829733208]
 enabled = false
 zoom = Vector2(3.5, 3.5)
-limit_top = -1000
 
 [node name="Area2D2" type="Area2D" parent="HullScannerRoom" unique_id=1116212881 node_paths=PackedStringArray("target_spawn_point")]
 script = ExtResource("4_x0ka3")
@@ -307,6 +308,7 @@ deadzone_ratio = 0.25
 position = Vector2(-1337, 480.00003)
 texture = ExtResource("9_hqns4")
 hframes = 5
+script = ExtResource("3_e8dv2")
 
 [node name="Area2D" type="Area2D" parent="HullGeneratorBlue" unique_id=503738795 node_paths=PackedStringArray("target_camera_to_enable")]
 collision_layer = 0
@@ -753,6 +755,7 @@ texture = ExtResource("14_nr8wp")
 position = Vector2(-809, 480)
 texture = ExtResource("20_fs4d3")
 hframes = 5
+script = ExtResource("3_e8dv2")
 
 [node name="Sprite2D" type="Sprite2D" parent="SubDock" unique_id=51661048]
 z_index = -2
@@ -800,7 +803,6 @@ shape = SubResource("RectangleShape2D_omo0a")
 
 [node name="Camera2D" type="Camera2D" parent="SubDock" unique_id=2033665584]
 zoom = Vector2(3.5, 3.5)
-limit_top = -1000
 
 [node name="Area2D" type="Area2D" parent="SubDock" unique_id=1356620910 node_paths=PackedStringArray("target_camera_to_enable")]
 collision_layer = 0

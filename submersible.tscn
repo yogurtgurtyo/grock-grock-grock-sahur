@@ -15,10 +15,11 @@
 [ext_resource type="Shader" uid="uid://blv1y2bagkkto" path="res://themes and more/wavytext.gdshader" id="11_auru0"]
 [ext_resource type="Texture2D" uid="uid://bdo82rdd70dgw" path="res://art/oceanwater.png" id="12_wo85t"]
 [ext_resource type="Script" uid="uid://pask3a7tk7lk" path="res://followscript.gd" id="13_ndryc"]
+[ext_resource type="Script" uid="uid://brqh0sa62itun" path="res://camerasha.gd" id="14_ayjec"]
 [ext_resource type="Texture2D" uid="uid://xavuf3wagdj3" path="res://art/plants/seaground.png" id="14_l37nm"]
+[ext_resource type="Texture2D" uid="uid://dkr2qlorhrii4" path="res://color/white.png" id="14_rlpgy"]
 [ext_resource type="Texture2D" uid="uid://dswgcbo0p4ogc" path="res://art/plants/sand.png" id="15_mvqe8"]
 [ext_resource type="Texture2D" uid="uid://1v7lnrwcf2fp" path="res://art/plants/clay.png" id="16_mvqe8"]
-[ext_resource type="Script" uid="uid://cuvvcfg7eopme" path="res://onoffstick.gd" id="16_wo85t"]
 [ext_resource type="Texture2D" uid="uid://cr76dufwpmhva" path="res://art/plants/seaweed_Sheet.png" id="17_auru0"]
 [ext_resource type="Script" uid="uid://d1pjihjo56l2j" path="res://frameanimationplayer.gd" id="18_1tbp4"]
 [ext_resource type="Texture2D" uid="uid://brmmu5erwhkib" path="res://art/plants/searock2.png" id="19_g2n2c"]
@@ -27,10 +28,28 @@
 [ext_resource type="Texture2D" uid="uid://cm7pvu1uiekh2" path="res://art/evil fish (SQUID)/evil fish squid body.png" id="21_loniv"]
 [ext_resource type="Script" uid="uid://ci38oj2p7rlq7" path="res://skeletone bone.gd" id="21_yb8he"]
 [ext_resource type="Script" uid="uid://ju7iqknuwqv4" path="res://itsgearsquid.gd" id="22_q081k"]
+[ext_resource type="Texture2D" uid="uid://bp06qbvppye54" path="res://art/ui/deadhealth.png" id="23_o5r8r"]
 [ext_resource type="Texture2D" uid="uid://dm16fedbit0pc" path="res://art/evil fish (SQUID)/evil arm segments/start segment.png" id="23_yb8he"]
 [ext_resource type="Texture2D" uid="uid://7pr1pn4r0uo5" path="res://art/evil fish (SQUID)/evil arm segments/middle segment.png" id="24_0la6e"]
+[ext_resource type="Texture2D" uid="uid://c8h7r3f808r6m" path="res://art/fx/puff thing.png" id="25_rrbeq"]
 [ext_resource type="Texture2D" uid="uid://f1vf4himu512" path="res://art/evil fish (SQUID)/evil arm segments/end segment longarm.png" id="25_rvim8"]
+[ext_resource type="Texture2D" uid="uid://bbj05rk2gmw5q" path="res://art/fx/puff thing 2.png" id="26_1hcfg"]
 [ext_resource type="Texture2D" uid="uid://bk6w1qn8w78tr" path="res://art/evil fish (SQUID)/eye squid eye.png" id="27_0la6e"]
+[ext_resource type="Texture2D" uid="uid://cd2t2dklmuw5b" path="res://art/fx/puff thing 3.png" id="27_gjp6w"]
+[ext_resource type="Script" uid="uid://c6ctssnvwga3m" path="res://canvas_layer.gd" id="29_jrotu"]
+[ext_resource type="Texture2D" uid="uid://bhw6oq8uu3c6h" path="res://art/fish/fish1-Sheet.png" id="30_j1t0d"]
+[ext_resource type="Script" uid="uid://bl57xwr7qkj33" path="res://textdisappearbutton.gd" id="31_8f3xu"]
+[ext_resource type="Script" uid="uid://c1aifjp6mjoay" path="res://fishschool.gd" id="31_igjsc"]
+[ext_resource type="StyleBox" uid="uid://de11vr2b1j2l4" path="res://flashbeaconicon.tres" id="32_jrotu"]
+[ext_resource type="StyleBox" uid="uid://dfg37r0laxnh4" path="res://flashbeaconcooldownicon.tres" id="33_iav5y"]
+[ext_resource type="Texture2D" uid="uid://bk7llqda407cw" path="res://art/ui/flashbeaconcooldown.png" id="34_rlpgy"]
+[ext_resource type="Script" uid="uid://btqqkpthkfmsq" path="res://flashbeacon.gd" id="36_8f3xu"]
+[ext_resource type="FontFile" uid="uid://b284iuu2jlw4v" path="res://art/font and other stuff/gamefont.ttf" id="40_smvjx"]
+[ext_resource type="Script" uid="uid://bl0wd20ih1eas" path="res://FishCOunt.gd" id="41_gqwd0"]
+[ext_resource type="Texture2D" uid="uid://drnomq4quhbtv" path="res://art/ui/subhealth.png" id="43_ayjec"]
+[ext_resource type="Script" uid="uid://cmtm7mhw2yfy7" path="res://buttononfishl.gd" id="46_gjp6w"]
+[ext_resource type="Texture2D" uid="uid://bs8tt0l11yj45" path="res://art/fx/brightbubble.png" id="49_wxaxs"]
+[ext_resource type="Script" uid="uid://db7vyb6p4s2lo" path="res://togamebutton.gd" id="50_wxaxs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tt2tb"]
 size = Vector2(124, 40)
@@ -42,7 +61,7 @@ shader_parameter/frequency = 5.0
 shader_parameter/speed = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_03dd7"]
-size = Vector2(2933.5, 185.875)
+size = Vector2(5979, 185.875)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g2n2c"]
 shader = ExtResource("11_auru0")
@@ -80,6 +99,9 @@ enabled = true
 modification_count = 1
 modifications/0 = SubResource("SkeletonModification2DCCDIK_e3do2")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t0cus"]
+size = Vector2(45, 14)
+
 [sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_yb8he"]
 target_nodepath = NodePath("../../../../CharacterBody2D")
 tip_nodepath = NodePath("BoneHead/Segment1/Segment2/Segment3/Segment3_Tip")
@@ -112,6 +134,12 @@ modifications/0 = SubResource("SkeletonModification2DCCDIK_yb8he")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_omo0a"]
 size = Vector2(42, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gd040"]
+size = Vector2(18, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8sqy0"]
+texture = ExtResource("34_rlpgy")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jsd17"]
 texture = ExtResource("9_n2h6l")
@@ -170,7 +198,7 @@ cutscene = NodePath("../Sprite2D")
 
 [node name="submerine gfame" type="Node2D" parent="." unique_id=719127998]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="submerine gfame" unique_id=228342678 groups=["Player"]]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="submerine gfame" unique_id=228342678 groups=["player"]]
 position = Vector2(392, 238)
 script = ExtResource("7_yy0es")
 
@@ -179,13 +207,6 @@ texture = ExtResource("8_m8w7g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/CharacterBody2D" unique_id=1923783611]
 shape = SubResource("RectangleShape2D_tt2tb")
-
-[node name="Camera2D" type="Camera2D" parent="submerine gfame/CharacterBody2D" unique_id=1840429807 node_paths=PackedStringArray("cutscene", "cutscene_camera", "main_camera")]
-enabled = false
-script = ExtResource("9_m8w7g")
-cutscene = NodePath("../../../Sprite2D")
-cutscene_camera = NodePath("../../../Camera2D")
-main_camera = NodePath(".")
 
 [node name="Sprite2D2" type="Sprite2D" parent="submerine gfame/CharacterBody2D" unique_id=915936020]
 texture = ExtResource("10_n2h6l")
@@ -199,13 +220,31 @@ scale = Vector2(20, 20)
 texture = ExtResource("12_wo85t")
 script = ExtResource("13_ndryc")
 
+[node name="flashtexture" type="Sprite2D" parent="submerine gfame/CharacterBody2D" unique_id=1830232431]
+visible = false
+z_index = 2
+texture_filter = 1
+scale = Vector2(25, 25)
+texture = ExtResource("14_rlpgy")
+
+[node name="Node2D" type="Node2D" parent="submerine gfame/CharacterBody2D" unique_id=154057361 node_paths=PackedStringArray("camera") groups=["camera"]]
+script = ExtResource("14_ayjec")
+camera = NodePath("Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="submerine gfame/CharacterBody2D/Node2D" unique_id=1840429807 node_paths=PackedStringArray("cutscene", "cutscene_camera", "main_camera")]
+enabled = false
+script = ExtResource("9_m8w7g")
+cutscene = NodePath("../../../../Sprite2D")
+cutscene_camera = NodePath("../../../../Camera2D")
+main_camera = NodePath(".")
+
 [node name="ground" type="Node2D" parent="submerine gfame" unique_id=1477988775]
 position = Vector2(0, 600)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="submerine gfame/ground" unique_id=1135755357]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/ground/StaticBody2D" unique_id=1481515442]
-position = Vector2(0, 49.0625)
+position = Vector2(97.5, 49.0625)
 shape = SubResource("RectangleShape2D_03dd7")
 
 [node name="Sprite2D" type="Sprite2D" parent="submerine gfame/ground/StaticBody2D" unique_id=65987050]
@@ -216,7 +255,7 @@ position = Vector2(0, -92)
 scale = Vector2(4, 4)
 texture = ExtResource("14_l37nm")
 region_enabled = true
-region_rect = Rect2(0, 0, 1024, 32)
+region_rect = Rect2(0, 0, 2048, 32)
 
 [node name="Sprite2D" type="Sprite2D" parent="submerine gfame/ground/StaticBody2D/Sprite2D" unique_id=718783349]
 z_index = 1
@@ -225,7 +264,7 @@ texture_repeat = 2
 position = Vector2(0, 24)
 texture = ExtResource("15_mvqe8")
 region_enabled = true
-region_rect = Rect2(32, 32, 1024, 16)
+region_rect = Rect2(32, 32, 2048, 16)
 
 [node name="Sprite2D" type="Sprite2D" parent="submerine gfame/ground/StaticBody2D/Sprite2D/Sprite2D" unique_id=93645309]
 texture_filter = 1
@@ -233,7 +272,21 @@ texture_repeat = 2
 position = Vector2(0, 40)
 texture = ExtResource("16_mvqe8")
 region_enabled = true
-region_rect = Rect2(32, 32, 1024, 64)
+region_rect = Rect2(32, 32, 2048, 64)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="submerine gfame/ground/StaticBody2D" unique_id=1724860846]
+position = Vector2(103, -2097)
+shape = SubResource("RectangleShape2D_03dd7")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="submerine gfame/ground/StaticBody2D" unique_id=1601297690]
+position = Vector2(-2469, -1029)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_03dd7")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="submerine gfame/ground/StaticBody2D" unique_id=176181698]
+position = Vector2(2858, -1040)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_03dd7")
 
 [node name="plants" type="Node2D" parent="submerine gfame/ground" unique_id=1602046548]
 
@@ -246,7 +299,6 @@ scale = Vector2(5, 5)
 texture = ExtResource("17_auru0")
 hframes = 7
 script = ExtResource("18_1tbp4")
-fps = 3.0
 
 [node name="seewad2" type="Sprite2D" parent="submerine gfame/ground/plants" unique_id=164038748]
 z_index = -1
@@ -257,7 +309,6 @@ scale = Vector2(5, 5)
 texture = ExtResource("17_auru0")
 hframes = 7
 script = ExtResource("18_1tbp4")
-fps = 4.0
 
 [node name="seewad3" type="Sprite2D" parent="submerine gfame/ground/plants" unique_id=540525275]
 z_index = -1
@@ -268,7 +319,6 @@ scale = Vector2(5, 5)
 texture = ExtResource("17_auru0")
 hframes = 7
 script = ExtResource("18_1tbp4")
-fps = 3.0
 
 [node name="seewad4" type="Sprite2D" parent="submerine gfame/ground/plants" unique_id=1727176357]
 z_index = -1
@@ -279,7 +329,6 @@ scale = Vector2(5, 5)
 texture = ExtResource("17_auru0")
 hframes = 7
 script = ExtResource("18_1tbp4")
-fps = 3.0
 
 [node name="decor" type="Node2D" parent="submerine gfame/ground" unique_id=1660390202]
 
@@ -395,12 +444,32 @@ texture = ExtResource("19_g2n2c")
 polygon = PackedVector2Array(0.20000458, -10.800003, -4.7999954, -10.800003, -10.399994, 3, -12.999992, 15.799995, 14, 16, 7.800003, -8.800003, 4.800003, -10.800003)
 
 [node name="fish (EVIL SQUID)" type="Node2D" parent="submerine gfame" unique_id=1911377948]
-position = Vector2(1379, 226)
+position = Vector2(619, 226)
 
 [node name="Node2D" type="Node2D" parent="submerine gfame/fish (EVIL SQUID)" unique_id=1057726232]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D" unique_id=1295958315]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D" unique_id=1295958315 node_paths=PackedStringArray("heart_1", "heart_2", "heart_3", "heart_4", "target_camera")]
 script = ExtResource("21_0la6e")
+move_speed = 300.0
+retreat_speed = 500.0
+min_retreat_duration = 5.0
+max_retreat_duration = 10.0
+max_rotation_degrees = 15.0
+rotation_speed = 1.0
+heart_1 = NodePath("../../../../CanvasLayer/Control2/heart")
+heart_2 = NodePath("../../../../CanvasLayer/Control2/heart2")
+heart_3 = NodePath("../../../../CanvasLayer/Control2/heart3")
+heart_4 = NodePath("../../../../CanvasLayer/Control2/heart4")
+alternate_heart_texture = ExtResource("23_o5r8r")
+time_per_heart = 3.0
+target_camera = NodePath("../../../CharacterBody2D/Node2D")
+shake_intensity = 1.0
+shake_duration = 0.5
+heart_image_1 = ExtResource("25_rrbeq")
+heart_image_2 = ExtResource("26_1hcfg")
+heart_image_3 = ExtResource("27_gjp6w")
+target_scene_path = "uid://c458yqapwx1ql"
+scene_transition_delay = 0.5
 
 [node name="Skeleton2D" type="Skeleton2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D/CharacterBody2D" unique_id=1319175684]
 position = Vector2(-16, 0)
@@ -416,6 +485,13 @@ position = Vector2(-32, 0)
 rest = Transform2D(1, 0, 0, 1, -32, 0)
 metadata/_local_pose_override_enabled_ = true
 
+[node name="Area2D" type="Area2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D/CharacterBody2D/Skeleton2D/BoneHead/Segment1" unique_id=513672109]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D/CharacterBody2D/Skeleton2D/BoneHead/Segment1/Area2D" unique_id=1633563717]
+position = Vector2(-31.5, 0)
+shape = SubResource("RectangleShape2D_t0cus")
+
 [node name="Sprite2D" type="Sprite2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D/CharacterBody2D/Skeleton2D/BoneHead/Segment1" unique_id=827126302]
 position = Vector2(-16, 0)
 rotation = 1.5707964
@@ -425,6 +501,13 @@ texture = ExtResource("23_yb8he")
 position = Vector2(-48, 0)
 rest = Transform2D(1, 0, 0, 1, -48, 0)
 metadata/_local_pose_override_enabled_ = true
+
+[node name="Area2D" type="Area2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D/CharacterBody2D/Skeleton2D/BoneHead/Segment1/Segment2" unique_id=1781968916]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D/CharacterBody2D/Skeleton2D/BoneHead/Segment1/Segment2/Area2D" unique_id=1493129505]
+position = Vector2(-28.5, 0)
+shape = SubResource("RectangleShape2D_t0cus")
 
 [node name="Sprite2D2" type="Sprite2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D/CharacterBody2D/Skeleton2D/BoneHead/Segment1/Segment2" unique_id=150827183]
 position = Vector2(-16, 0)
@@ -436,6 +519,13 @@ position = Vector2(-48, 0)
 scale = Vector2(0.99999976, 0.99999976)
 rest = Transform2D(0.99999976, 0, 0, 0.99999976, -48, 0)
 metadata/_local_pose_override_enabled_ = true
+
+[node name="Area2D" type="Area2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D/CharacterBody2D/Skeleton2D/BoneHead/Segment1/Segment2/Segment3" unique_id=227632917]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D/CharacterBody2D/Skeleton2D/BoneHead/Segment1/Segment2/Segment3/Area2D" unique_id=1048166849]
+position = Vector2(-25.5, 0)
+shape = SubResource("RectangleShape2D_t0cus")
 
 [node name="Sprite2D3" type="Sprite2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D/CharacterBody2D/Skeleton2D/BoneHead/Segment1/Segment2/Segment3" unique_id=1786035793]
 position = Vector2(-16, 0)
@@ -464,6 +554,16 @@ position = Vector2(-32, 0)
 rest = Transform2D(1, 0, 0, 1, -32, 0)
 metadata/_local_pose_override_enabled_ = true
 
+[node name="Area2D2" type="Area2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D/CharacterBody2D/Skeleton2D2/BoneHead/Segment1" unique_id=1984103885]
+position = Vector2(-95.997925, 0.011810303)
+rotation = -0.000261864
+scale = Vector2(0.9999419, 0.9999419)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D/CharacterBody2D/Skeleton2D2/BoneHead/Segment1/Area2D2" unique_id=1137081133]
+position = Vector2(-26, 1.0927852e-07)
+shape = SubResource("RectangleShape2D_t0cus")
+
 [node name="Sprite2D" type="Sprite2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D/CharacterBody2D/Skeleton2D2/BoneHead/Segment1" unique_id=1508378477]
 position = Vector2(-16, 0)
 rotation = 1.5707964
@@ -473,6 +573,14 @@ texture = ExtResource("23_yb8he")
 position = Vector2(-48, 0)
 rest = Transform2D(1, 0, 0, 1, -48, 0)
 metadata/_local_pose_override_enabled_ = true
+
+[node name="Area2D" type="Area2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D/CharacterBody2D/Skeleton2D2/BoneHead/Segment1/Segment2" unique_id=185040593]
+scale = Vector2(1.0000001, 1.0000001)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D/CharacterBody2D/Skeleton2D2/BoneHead/Segment1/Segment2/Area2D" unique_id=1104678094]
+position = Vector2(-29, -2.1855698e-08)
+shape = SubResource("RectangleShape2D_t0cus")
 
 [node name="Sprite2D2" type="Sprite2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D/CharacterBody2D/Skeleton2D2/BoneHead/Segment1/Segment2" unique_id=1333555673]
 position = Vector2(-16, 0)
@@ -484,6 +592,16 @@ position = Vector2(-48, 0)
 scale = Vector2(0.99999976, 0.99999976)
 rest = Transform2D(0.99999976, 0, 0, 0.99999976, -48, 0)
 metadata/_local_pose_override_enabled_ = true
+
+[node name="Area2D" type="Area2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D/CharacterBody2D/Skeleton2D2/BoneHead/Segment1/Segment2/Segment3" unique_id=1686355497]
+position = Vector2(96.010254, 0.004272461)
+rotation = 0.00026266123
+scale = Vector2(1.0001122, 1.0001122)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D/CharacterBody2D/Skeleton2D2/BoneHead/Segment1/Segment2/Segment3/Area2D" unique_id=1136128298]
+position = Vector2(-31.5, 0)
+shape = SubResource("RectangleShape2D_t0cus")
 
 [node name="Sprite2D3" type="Sprite2D" parent="submerine gfame/fish (EVIL SQUID)/Node2D/CharacterBody2D/Skeleton2D2/BoneHead/Segment1/Segment2/Segment3" unique_id=315333896]
 position = Vector2(-16, 0)
@@ -510,9 +628,318 @@ texture = ExtResource("27_0la6e")
 position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_omo0a")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1725138040]
+[node name="collectable fish" type="Node2D" parent="submerine gfame" unique_id=1449919844]
+position = Vector2(-78, 499)
 
-[node name="VirtualJoystick" type="VirtualJoystick" parent="CanvasLayer" unique_id=1844914327 node_paths=PackedStringArray("cutscene")]
+[node name="schoolfish" type="Node2D" parent="submerine gfame/collectable fish" unique_id=1683336110]
+position = Vector2(-24, -91)
+
+[node name="Marker2D" type="Marker2D" parent="submerine gfame/collectable fish/schoolfish" unique_id=1350299324]
+position = Vector2(0, -61)
+
+[node name="fish" type="CharacterBody2D" parent="submerine gfame/collectable fish/schoolfish" unique_id=1787198785 node_paths=PackedStringArray("anchor_marker")]
+position = Vector2(27, -15)
+script = ExtResource("31_igjsc")
+anchor_marker = NodePath("../Marker2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/collectable fish/schoolfish/fish" unique_id=1825344065]
+texture_filter = 1
+texture = ExtResource("30_j1t0d")
+hframes = 4
+script = ExtResource("18_1tbp4")
+fps = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/collectable fish/schoolfish/fish" unique_id=173296749]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_gd040")
+
+[node name="fish2" type="CharacterBody2D" parent="submerine gfame/collectable fish/schoolfish" unique_id=1466088553 node_paths=PackedStringArray("anchor_marker")]
+position = Vector2(-26, -5)
+script = ExtResource("31_igjsc")
+anchor_marker = NodePath("../Marker2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/collectable fish/schoolfish/fish2" unique_id=1736576066]
+texture_filter = 1
+texture = ExtResource("30_j1t0d")
+hframes = 4
+script = ExtResource("18_1tbp4")
+fps = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/collectable fish/schoolfish/fish2" unique_id=474453784]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_gd040")
+
+[node name="fish3" type="CharacterBody2D" parent="submerine gfame/collectable fish/schoolfish" unique_id=2141295468 node_paths=PackedStringArray("anchor_marker")]
+position = Vector2(-21, 24)
+script = ExtResource("31_igjsc")
+anchor_marker = NodePath("../Marker2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/collectable fish/schoolfish/fish3" unique_id=2109814817]
+texture_filter = 1
+texture = ExtResource("30_j1t0d")
+hframes = 4
+script = ExtResource("18_1tbp4")
+fps = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/collectable fish/schoolfish/fish3" unique_id=1082023419]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_gd040")
+
+[node name="fish4" type="CharacterBody2D" parent="submerine gfame/collectable fish/schoolfish" unique_id=1671008102 node_paths=PackedStringArray("anchor_marker")]
+position = Vector2(10, 16)
+script = ExtResource("31_igjsc")
+anchor_marker = NodePath("../Marker2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/collectable fish/schoolfish/fish4" unique_id=978081119]
+texture_filter = 1
+texture = ExtResource("30_j1t0d")
+hframes = 4
+script = ExtResource("18_1tbp4")
+fps = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/collectable fish/schoolfish/fish4" unique_id=1255648991]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_gd040")
+
+[node name="schoolfish2" type="Node2D" parent="submerine gfame/collectable fish" unique_id=286894030]
+position = Vector2(896, 13)
+
+[node name="Marker2D" type="Marker2D" parent="submerine gfame/collectable fish/schoolfish2" unique_id=281901098]
+position = Vector2(0, -64)
+
+[node name="fish" type="CharacterBody2D" parent="submerine gfame/collectable fish/schoolfish2" unique_id=607499006 node_paths=PackedStringArray("anchor_marker")]
+position = Vector2(27, -15)
+script = ExtResource("31_igjsc")
+anchor_marker = NodePath("../Marker2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/collectable fish/schoolfish2/fish" unique_id=1041779812]
+texture_filter = 1
+texture = ExtResource("30_j1t0d")
+hframes = 4
+script = ExtResource("18_1tbp4")
+fps = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/collectable fish/schoolfish2/fish" unique_id=589331343]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_gd040")
+
+[node name="fish2" type="CharacterBody2D" parent="submerine gfame/collectable fish/schoolfish2" unique_id=1811360135 node_paths=PackedStringArray("anchor_marker")]
+position = Vector2(-26, -5)
+script = ExtResource("31_igjsc")
+anchor_marker = NodePath("../Marker2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/collectable fish/schoolfish2/fish2" unique_id=922072263]
+texture_filter = 1
+texture = ExtResource("30_j1t0d")
+hframes = 4
+script = ExtResource("18_1tbp4")
+fps = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/collectable fish/schoolfish2/fish2" unique_id=255335345]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_gd040")
+
+[node name="fish3" type="CharacterBody2D" parent="submerine gfame/collectable fish/schoolfish2" unique_id=520701375 node_paths=PackedStringArray("anchor_marker")]
+position = Vector2(-21, 24)
+script = ExtResource("31_igjsc")
+anchor_marker = NodePath("../Marker2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/collectable fish/schoolfish2/fish3" unique_id=556299145]
+texture_filter = 1
+texture = ExtResource("30_j1t0d")
+hframes = 4
+script = ExtResource("18_1tbp4")
+fps = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/collectable fish/schoolfish2/fish3" unique_id=811407393]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_gd040")
+
+[node name="fish4" type="CharacterBody2D" parent="submerine gfame/collectable fish/schoolfish2" unique_id=1499925089 node_paths=PackedStringArray("anchor_marker")]
+position = Vector2(10, 16)
+script = ExtResource("31_igjsc")
+anchor_marker = NodePath("../Marker2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/collectable fish/schoolfish2/fish4" unique_id=1002730757]
+texture_filter = 1
+texture = ExtResource("30_j1t0d")
+hframes = 4
+script = ExtResource("18_1tbp4")
+fps = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/collectable fish/schoolfish2/fish4" unique_id=1364700639]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_gd040")
+
+[node name="schoolfish3" type="Node2D" parent="submerine gfame/collectable fish" unique_id=1920677874]
+position = Vector2(753, -61)
+
+[node name="Marker2D" type="Marker2D" parent="submerine gfame/collectable fish/schoolfish3" unique_id=349544828]
+position = Vector2(0, -52)
+
+[node name="fish" type="CharacterBody2D" parent="submerine gfame/collectable fish/schoolfish3" unique_id=1815195986 node_paths=PackedStringArray("anchor_marker")]
+position = Vector2(27, -15)
+script = ExtResource("31_igjsc")
+anchor_marker = NodePath("../Marker2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/collectable fish/schoolfish3/fish" unique_id=1734988263]
+texture_filter = 1
+texture = ExtResource("30_j1t0d")
+hframes = 4
+script = ExtResource("18_1tbp4")
+fps = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/collectable fish/schoolfish3/fish" unique_id=1305341139]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_gd040")
+
+[node name="fish2" type="CharacterBody2D" parent="submerine gfame/collectable fish/schoolfish3" unique_id=1830128667 node_paths=PackedStringArray("anchor_marker")]
+position = Vector2(-26, -5)
+script = ExtResource("31_igjsc")
+anchor_marker = NodePath("../Marker2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/collectable fish/schoolfish3/fish2" unique_id=1021211522]
+texture_filter = 1
+texture = ExtResource("30_j1t0d")
+hframes = 4
+script = ExtResource("18_1tbp4")
+fps = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/collectable fish/schoolfish3/fish2" unique_id=49656717]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_gd040")
+
+[node name="fish3" type="CharacterBody2D" parent="submerine gfame/collectable fish/schoolfish3" unique_id=1305727977 node_paths=PackedStringArray("anchor_marker")]
+position = Vector2(-21, 24)
+script = ExtResource("31_igjsc")
+anchor_marker = NodePath("../Marker2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/collectable fish/schoolfish3/fish3" unique_id=1325474255]
+texture_filter = 1
+texture = ExtResource("30_j1t0d")
+hframes = 4
+script = ExtResource("18_1tbp4")
+fps = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/collectable fish/schoolfish3/fish3" unique_id=1031210393]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_gd040")
+
+[node name="fish4" type="CharacterBody2D" parent="submerine gfame/collectable fish/schoolfish3" unique_id=1673096098 node_paths=PackedStringArray("anchor_marker")]
+position = Vector2(10, 16)
+script = ExtResource("31_igjsc")
+anchor_marker = NodePath("../Marker2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/collectable fish/schoolfish3/fish4" unique_id=174189567]
+texture_filter = 1
+texture = ExtResource("30_j1t0d")
+hframes = 4
+script = ExtResource("18_1tbp4")
+fps = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/collectable fish/schoolfish3/fish4" unique_id=1273507660]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_gd040")
+
+[node name="schoolfish4" type="Node2D" parent="submerine gfame/collectable fish" unique_id=1165845671]
+position = Vector2(-361, 3)
+
+[node name="Marker2D" type="Marker2D" parent="submerine gfame/collectable fish/schoolfish4" unique_id=1187712819]
+position = Vector2(0, -69)
+
+[node name="fish" type="CharacterBody2D" parent="submerine gfame/collectable fish/schoolfish4" unique_id=1180231894 node_paths=PackedStringArray("anchor_marker")]
+position = Vector2(27, -15)
+script = ExtResource("31_igjsc")
+anchor_marker = NodePath("../Marker2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/collectable fish/schoolfish4/fish" unique_id=1875730234]
+texture_filter = 1
+texture = ExtResource("30_j1t0d")
+hframes = 4
+script = ExtResource("18_1tbp4")
+fps = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/collectable fish/schoolfish4/fish" unique_id=1262888198]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_gd040")
+
+[node name="fish2" type="CharacterBody2D" parent="submerine gfame/collectable fish/schoolfish4" unique_id=149141213 node_paths=PackedStringArray("anchor_marker")]
+position = Vector2(-26, -5)
+script = ExtResource("31_igjsc")
+anchor_marker = NodePath("../Marker2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/collectable fish/schoolfish4/fish2" unique_id=968348342]
+texture_filter = 1
+texture = ExtResource("30_j1t0d")
+hframes = 4
+script = ExtResource("18_1tbp4")
+fps = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/collectable fish/schoolfish4/fish2" unique_id=400267237]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_gd040")
+
+[node name="fish3" type="CharacterBody2D" parent="submerine gfame/collectable fish/schoolfish4" unique_id=452282913 node_paths=PackedStringArray("anchor_marker")]
+position = Vector2(-21, 24)
+script = ExtResource("31_igjsc")
+anchor_marker = NodePath("../Marker2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/collectable fish/schoolfish4/fish3" unique_id=1417141265]
+texture_filter = 1
+texture = ExtResource("30_j1t0d")
+hframes = 4
+script = ExtResource("18_1tbp4")
+fps = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/collectable fish/schoolfish4/fish3" unique_id=1945079456]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_gd040")
+
+[node name="fish4" type="CharacterBody2D" parent="submerine gfame/collectable fish/schoolfish4" unique_id=815780745 node_paths=PackedStringArray("anchor_marker")]
+position = Vector2(10, 16)
+script = ExtResource("31_igjsc")
+anchor_marker = NodePath("../Marker2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="submerine gfame/collectable fish/schoolfish4/fish4" unique_id=868722978]
+texture_filter = 1
+texture = ExtResource("30_j1t0d")
+hframes = 4
+script = ExtResource("18_1tbp4")
+fps = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="submerine gfame/collectable fish/schoolfish4/fish4" unique_id=153569452]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_gd040")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1725138040 node_paths=PackedStringArray("cutscene")]
+script = ExtResource("29_jrotu")
+cutscene = NodePath("../Sprite2D")
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1871978639 node_paths=PackedStringArray("button", "target_text_node", "secondary_target_node")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("31_8f3xu")
+button = NodePath("Button")
+target_text_node = NodePath("../RichTextLabel")
+secondary_target_node = NodePath("../Control2")
+
+[node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=317837117 node_paths=PackedStringArray("target_sprite")]
+layout_mode = 0
+offset_left = 938.0
+offset_top = 459.0
+offset_right = 1038.0
+offset_bottom = 559.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = ExtResource("32_jrotu")
+theme_override_styles/pressed = ExtResource("33_iav5y")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8sqy0")
+theme_override_styles/disabled = ExtResource("33_iav5y")
+script = ExtResource("36_8f3xu")
+target_sprite = NodePath("../../../submerine gfame/CharacterBody2D/flashtexture")
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="CanvasLayer" unique_id=1844914327]
 custom_minimum_size = Vector2(150, 150)
 custom_maximum_size = Vector2(300, 300)
 propagate_maximum_size = true
@@ -536,8 +963,75 @@ theme_override_styles/pressed_tip = SubResource("StyleBoxTexture_ndryc")
 joystick_size = 150.0
 tip_size = 75.0
 deadzone_ratio = 0.25
-script = ExtResource("16_wo85t")
-cutscene = NodePath("../../Sprite2D")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=1562608797]
+offset_left = 278.0
+offset_top = 491.0
+offset_right = 1028.0
+offset_bottom = 531.0
+theme_override_fonts/normal_font = ExtResource("3_62p3d")
+theme_override_font_sizes/normal_font_size = 32
+text = "Click the flashlight button to scare it off."
+
+[node name="Control2" type="Control" parent="CanvasLayer" unique_id=2137118725]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="heart2" type="Sprite2D" parent="CanvasLayer/Control2" unique_id=1937772986]
+position = Vector2(501, 509)
+scale = Vector2(2.062, 2.062)
+texture = ExtResource("43_ayjec")
+
+[node name="heart3" type="Sprite2D" parent="CanvasLayer/Control2" unique_id=1133585437]
+position = Vector2(597, 509)
+scale = Vector2(2.062, 2.062)
+texture = ExtResource("43_ayjec")
+
+[node name="heart4" type="Sprite2D" parent="CanvasLayer/Control2" unique_id=2077810219]
+position = Vector2(693.00006, 509)
+scale = Vector2(2.062, 2.062)
+texture = ExtResource("43_ayjec")
+
+[node name="heart" type="Sprite2D" parent="CanvasLayer/Control2" unique_id=1250117729]
+position = Vector2(405.00003, 509)
+scale = Vector2(2.062, 2.062)
+texture = ExtResource("43_ayjec")
+
+[node name="Control" type="Control" parent="CanvasLayer/Control2" unique_id=171809452 node_paths=PackedStringArray("target_button")]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("46_gjp6w")
+target_score = 12
+target_button = NodePath("Button")
+
+[node name="FishCount" type="RichTextLabel" parent="CanvasLayer/Control2/Control" unique_id=319356600 groups=["score_ui"]]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 250.0
+offset_right = 160.0
+offset_bottom = 378.0
+theme_override_fonts/normal_font = ExtResource("40_smvjx")
+theme_override_font_sizes/normal_font_size = 32
+script = ExtResource("41_gqwd0")
+
+[node name="Button" type="Button" parent="CanvasLayer/Control2/Control" unique_id=1440588082]
+visible = false
+layout_mode = 0
+offset_left = 32.0
+offset_top = 139.0
+offset_right = 182.0
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("40_smvjx")
+theme_override_font_sizes/font_size = 32
+text = "Go Back"
+icon = ExtResource("49_wxaxs")
+expand_icon = true
+script = ExtResource("50_wxaxs")
+target_scene = "uid://dwefa35g8u6kk"
 
 [connection signal="finished" from="Sprite2D" to="Control/Button" method="hide"]
 [connection signal="skipped" from="Sprite2D" to="Control/Button" method="hide"]
